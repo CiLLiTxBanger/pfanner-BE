@@ -5,9 +5,18 @@
 
 2. Activate the virtual environment 
    "source env/bin/activate"
+   ```
+   .\env\Scripts\activate
+   ```
 
-3. Install dependencies 
+4. Install dependencies 
    "pip install -r requirements.txt"
 
-4. Mac Users need to run 
+5. Mac Users need to run 
    "brew install mysql" first
+
+### To create models + migration
+```
+python manage.py makemigrations YOUR_MODEL_NAME
+python manage.py migrate
+```
