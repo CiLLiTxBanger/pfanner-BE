@@ -134,3 +134,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+PfannerObstgartenAPI/api/.DS_Store
+PfannerObstgartenAPI/.DS_Store
+.DS_Store
