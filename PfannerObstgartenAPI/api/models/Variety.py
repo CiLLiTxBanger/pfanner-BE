@@ -1,5 +1,6 @@
 from django.db import models
 
+#Sorte
 class Variety(models.Model):
     name = models.CharField(max_length=50, blank=False)
     blossom = models.CharField(max_length=100, blank=False)
