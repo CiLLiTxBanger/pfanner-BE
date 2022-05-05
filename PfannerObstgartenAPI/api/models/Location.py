@@ -6,6 +6,3 @@ class Location(models.Model):
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        ordering = ('country', )

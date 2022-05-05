@@ -2,14 +2,14 @@ from django.db import models
 
 class Tree(models.Model):
     type = models.CharField(max_length=50, blank=False)
-    variety_id = models.ForeignKey(
+    variety = models.ForeignKey(
         'Variety',
         on_delete=models.CASCADE,
     )
     row = models.IntegerField()
     column = models.IntegerField()
     planted_on = models.DateTimeField(auto_now_add=True)
-    location_id = models.ForeignKey(
+    location = models.ForeignKey(
         'Location',
         on_delete=models.CASCADE
     )
