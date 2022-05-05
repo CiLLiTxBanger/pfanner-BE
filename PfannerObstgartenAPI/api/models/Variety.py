@@ -8,6 +8,7 @@ class Variety(models.Model):
     climate = models.CharField(max_length=100, blank=False)
     pick_maturity = models.CharField(max_length=100, blank=False)
     usage = models.CharField(max_length=100, blank=False)
+    bio = models.BooleanField(default=False)
     pollinator = models.CharField(max_length=100, blank=False)
     properties = models.CharField(max_length=100, blank=False)
     output = models.CharField(max_length=100, blank=False)
