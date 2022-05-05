@@ -6,6 +6,6 @@ class DiseaseMeasurement(models.Model):
             'OrchardMeasurement',
             on_delete=models.CASCADE
     )
-    disease = models.ForeignKey('Disease')
+    disease = models.ForeignKey('Disease', on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
