@@ -2,13 +2,10 @@ from django.db import models
 
 class Tree(models.Model):
     type = models.CharField(max_length=50, blank=False)
-    variety = models.ForeignKey(
-        'Variety',
-        on_delete=models.CASCADE,
-    )
+    variety = models.ForeignKey('Variety')
     row = models.IntegerField()
     column = models.IntegerField()
-    planted_on = models.DateTimeField(auto_now_add=True)
+    planted_on = models.DateTimeField(default=datetime.now)
     location = models.ForeignKey(
         'Location',
         on_delete=models.CASCADE
@@ -16,7 +13,7 @@ class Tree(models.Model):
     organic = models.BooleanField()
     latitude = models.DecimalField(max_digits=15, decimal_places=10)
     longitude = models.DecimalField(max_digits=15, decimal_places=10)
-    cut = models.CharField(max_length=50, blank=False)
+    cut = models.CharField(max_length=50)
     active = models.BooleanField(default=True)
     owner = models.ForeignKey('auth.User', related_name='trees', on_delete=models.CASCADE, default=1)
     created_on = models.DateTimeField(auto_now_add=True)  #auto_now_add -> created time
@@ -24,3 +21,4 @@ class Tree(models.Model):
     
     class Meta:
         ordering = ('row', 'column', )
+#         models.UniqueConstraint(fields=['location', 'row', 'column']), name='unique position')
