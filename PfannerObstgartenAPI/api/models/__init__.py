@@ -1,6 +1,5 @@
 from pydoc import importfile
 
-from PfannerObstgartenAPI.api.models.Season import Season
 from .Tree import Tree
 from .Location import Location
 from .Variety import Variety
