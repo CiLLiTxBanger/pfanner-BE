@@ -1,0 +1,10 @@
+Offene Fragen:
+
+Tree -> Constraint, wie realisieren? Active wird beim Baum auf 0 gesetzt wenn er stirbt, damit dieser nicht gelöscht wird? Wie dann constraints auf location row und column realisieren?
+
+
+
+Beziehungen anschauen, passen diese soweit?
+
+
+Krankheitsanfälligeit bei Variety Tabelle? Nicht benötigt? In dem Sortenbeschreibungsfile von Pfanner ist das drinnen.
