@@ -2,7 +2,9 @@ from django.db import models
 
 class Tree(models.Model):
     type = models.CharField(max_length=50, blank=False)
-    variety = models.ForeignKey('Variety')
+    variety = models.ForeignKey(
+        'Variety',
+        on_delete=models.SET_NULL)
     row = models.IntegerField()
     column = models.IntegerField()
     planted_on = models.DateTimeField(default=datetime.now)
