@@ -8,3 +8,10 @@ Beziehungen anschauen, passen diese soweit?
 
 
 Krankheitsanfälligeit bei Variety Tabelle? Nicht benötigt? In dem Sortenbeschreibungsfile von Pfanner ist das drinnen.
+
+
+ToDo: // NEXT STEPS:
+Serializers
+Urls
+View
+Auth
