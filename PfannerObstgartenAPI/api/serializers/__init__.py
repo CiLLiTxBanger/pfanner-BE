@@ -16,3 +16,4 @@ from .StrengthMeasurementSerializer import StrengthMeasurementSerializer
 from .SugarMeasurementSerializer import SugarMeasurementSerializer
 from .TemperatureSerializer import TemperatureSerializer
 from .YieldHabitSerializer import YieldHabitSerializer
+from .UserSerializer import UserSerializer
