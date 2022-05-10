@@ -9,10 +9,10 @@ from .FrostSensivitySerializer import FrostSensitivitySerializer
 from .GrowthHabitSerializer import GrowthHabitSerializer
 from .ImageSerializer import ImageSerializer
 from .LabMeasurementSerializer import LabMeasurementSerializer
-#from .OrchardMeasurementSerializer import OrchardMeasurementSerializer
+from .OrchardMeasurementSerializer import OrchardMeasurementSerializer
 from .PrecipitationSerializer import PrecipitationSerializer
-#from .SeasonSerializer import SeasonSerializer
-#from .StrengthMeasurementSerializer import StrengthMeasurementSerializer
-#from .SugarMeasurementSerializer import SugarMeasurementSerializer
-#from .TemperatureSerializer import TemperatureSerializer
-#from .YieldHabitSerializer import YieldHabitSerializer
+from .SeasonSerializer import SeasonSerializer
+from .StrengthMeasurementSerializer import StrengthMeasurementSerializer
+from .SugarMeasurementSerializer import SugarMeasurementSerializer
+from .TemperatureSerializer import TemperatureSerializer
+from .YieldHabitSerializer import YieldHabitSerializer
