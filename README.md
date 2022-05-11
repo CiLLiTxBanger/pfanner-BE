@@ -15,8 +15,8 @@
 5. Mac Users need to run 
    "brew install mysql" first
 
-### To create models + migration
+### To create migrations
 ```
-python manage.py makemigrations YOUR_MODEL_NAME
+python manage.py makemigrations
 python manage.py migrate
 ```

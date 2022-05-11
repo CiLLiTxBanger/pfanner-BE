@@ -1,7 +1,5 @@
 # under construction
 
-
-
 from django.contrib.auth.models import User
 from rest_framework import permissions
 from api.serializers import UserSerializer
@@ -9,7 +7,7 @@ from api.models import Tree
 from api.serializers import TreeSerializer
 from rest_framework import generics
 from rest_framework import permissions
-#from api.permissions import IsOwnerOrReadOnly         wird für die authentifizierung benötigt
+#from api.permissions import IsOwnerOrReadOnly         #wird für die authentifizierung benötigt
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse

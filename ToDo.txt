@@ -11,7 +11,7 @@ Krankheitsanfälligeit bei Variety Tabelle? Nicht benötigt? In dem Sortenbeschr
 
 
 ToDo: // NEXT STEPS:
-Serializers
+Serializers fertigstellen
 Urls
 View
 Auth
