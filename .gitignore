@@ -137,3 +137,4 @@ dmypy.json
 PfannerObstgartenAPI/api/.DS_Store
 PfannerObstgartenAPI/.DS_Store
 .DS_Store
+PfannerObstgartenAPI/PfannerObstgartenAPI/settings.py
