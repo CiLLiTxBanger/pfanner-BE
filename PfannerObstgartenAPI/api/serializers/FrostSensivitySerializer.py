@@ -4,4 +4,4 @@ from api.models import FrostSensitivity
 class FrostSensitivitySerializer(serializers.ModelSerializer):
     class Meta:
         model = FrostSensitivity
-        fields = ['scale', 'created_on', 'edited_on'] 
+        fields = ['id', 'scale', 'created_on', 'edited_on'] 

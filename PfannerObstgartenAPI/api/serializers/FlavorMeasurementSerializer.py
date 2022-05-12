@@ -4,4 +4,4 @@ from api.models import FlavorMeasurement
 class FlavorMeasurementSerializer(serializers.ModelSerializer):
     class Meta:
         model = FlavorMeasurement
-        fields = ['scale', 'created_on', 'edited_on'] 
+        fields = ['id', 'scale', 'created_on', 'edited_on'] 

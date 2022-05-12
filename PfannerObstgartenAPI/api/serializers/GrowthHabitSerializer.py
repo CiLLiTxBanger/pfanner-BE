@@ -4,4 +4,4 @@ from api.models import GrowthHabit
 class GrowthHabitSerializer(serializers.ModelSerializer):
     class Meta:
         model = GrowthHabit
-        fields = ['scale', 'created_on', 'edited_on'] 
+        fields = ['id', 'scale', 'created_on', 'edited_on'] 

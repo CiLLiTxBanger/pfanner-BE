@@ -4,4 +4,4 @@ from api.models import YieldHabit
 class YieldHabitSerializer(serializers.ModelSerializer):
     class Meta:
         model = YieldHabit
-        fields = ['scale', 'created_on', 'edited_on'] 
+        fields = ['id', 'scale', 'created_on', 'edited_on'] 

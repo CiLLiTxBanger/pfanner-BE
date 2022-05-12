@@ -4,4 +4,4 @@ from api.models import SugarMeasurement
 class SugarMeasurementSerializer(serializers.ModelSerializer):
     class Meta:
         model = SugarMeasurement
-        fields = ['scale', 'created_on', 'edited_on'] 
+        fields = ['id', 'scale', 'created_on', 'edited_on'] 

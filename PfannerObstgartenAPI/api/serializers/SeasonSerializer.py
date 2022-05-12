@@ -4,4 +4,4 @@ from api.models import Season
 class SeasonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Season
-        fields = ['scale', 'created_on', 'edited_on'] 
+        fields = ['id', 'scale', 'created_on', 'edited_on'] 
