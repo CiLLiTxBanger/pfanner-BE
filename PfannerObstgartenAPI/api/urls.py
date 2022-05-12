@@ -9,10 +9,11 @@ urlpatterns = [
      path('api/getvarietybytreeid/<int:pk>/', views.VarietyByTreeId.as_view(), name='varietyByTreeId'),
      path('api/trees/', views.views.TreeList.as_view(), name='tree-list'),
      path('api/trees/<int:pk>/', views.views.TreeDetail.as_view(), name='tree-detail'),
+     path('api/locations/', views.views.TreeList.as_view(), name='location-list'),
+     path('api/locations/<int:pk>/', views.views.TreeDetail.as_view(), name='location-detail'),
      path('users/', views.views.UserList.as_view(), name='user-list'),
      path('users/<int:pk>/', views.views.UserDetail.as_view(), name='user-detail'),
      path('testpostview/', views.testPostView.TestPostView.as_view(), name='testexampleview'),
-#    path('test', views.test.current_datetime)
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
