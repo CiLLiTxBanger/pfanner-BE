@@ -2,3 +2,6 @@
 from .views import api_root
 from .test import current_datetime
 from .testPostView import TestPostView
+from .VarietyView import VarietyList
+from .VarietyView import VarietyDetail
+from .VarietyView import VarietyByTreeId
