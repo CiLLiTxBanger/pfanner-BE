@@ -37,3 +37,6 @@ Setup auf Server:
 5. python3 -m venv env
 6. . env/bin/activate
 7. pip install -r requiremeents.txt
+
+ZUM INSTALLIEREN VON MYSQLCLIENT
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential

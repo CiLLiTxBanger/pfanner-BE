@@ -11,7 +11,8 @@ Krankheitsanfälligeit bei Variety Tabelle? Nicht benötigt? In dem Sortenbeschr
 
 
 ToDo: // NEXT STEPS:
-Serializers fertigstellen
-Urls
-View
-Auth
+View location
+Images im model mit variety verknüpfen statt mit trees
+Images einfügen - wie funktioniert das?
+Views aufsplitten
+Authentifizierung - wie funktioniert das?
