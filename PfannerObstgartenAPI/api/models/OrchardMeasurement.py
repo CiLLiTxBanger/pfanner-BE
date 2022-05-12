@@ -10,7 +10,7 @@ class OrchardMeasurement(models.Model):
                     'Tree',
                     on_delete=models.CASCADE
     )
-    FrostSensitivity = models.ForeignKey('FrostSensitivity', on_delete=models.DO_NOTHING)
+    frostSensitivity = models.ForeignKey('FrostSensitivity', on_delete=models.DO_NOTHING)
     growthHabit = models.ForeignKey('GrowthHabit', on_delete=models.DO_NOTHING)
     yieldHabit = models.ForeignKey('YieldHabit', on_delete=models.DO_NOTHING)
     season = models.ForeignKey('Season', on_delete=models.DO_NOTHING)

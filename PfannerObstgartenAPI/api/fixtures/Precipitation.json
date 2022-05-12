@@ -1,0 +1,11 @@
+[
+  {
+    "model": "api.Precipitation",
+    "pk": 1,
+    "fields": {
+      "scale": "viel",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }
+]

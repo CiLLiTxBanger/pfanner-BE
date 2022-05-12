@@ -1,0 +1,14 @@
+[
+  {
+    "model": "api.Image",
+    "pk": 1,
+    "fields": {
+      "url": "test/test",
+      "image": "test/test",
+      "orchardMeasurement": "1",
+      "tree": "1",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }
+]

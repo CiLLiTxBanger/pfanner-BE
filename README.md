@@ -20,3 +20,7 @@
 python manage.py makemigrations
 python manage.py migrate
 ```
+###To load Fixtures
+```
+py manage.py loaddata AcidMeasurement.json Disease.json FlavorMeasurement.json FrostSensitivity.json GrowthHabit.json Location.json Precipitation.json Season.json StrengthMeasurement.json SugarMeasurement.json Temperature.json Variety.json YieldHabit.json Tree.json OrchardMeasurement.json DiseaseMeasurement.json LabMeasurement.json Image.json
+```
