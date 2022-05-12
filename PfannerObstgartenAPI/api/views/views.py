@@ -18,6 +18,7 @@ def api_root(request, format=None):
     return Response({
         'users': reverse('user-list', request=request, format=format),
         'trees': reverse('tree-list', request=request, format=format),
+        'varieties': reverse('variety-list', request=request, format=format)
     })
 
 class UserList(generics.ListAPIView):
