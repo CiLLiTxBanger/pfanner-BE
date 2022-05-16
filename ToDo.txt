@@ -12,7 +12,6 @@ Krankheitsanfälligeit bei Variety Tabelle? Nicht benötigt? In dem Sortenbeschr
 
 ToDo: // NEXT STEPS:
 View location
-Images im model mit variety verknüpfen statt mit trees
-Images einfügen - wie funktioniert das?
+Funktioniert Images auf den Server hochladen?
 Views aufsplitten
 Authentifizierung - wie funktioniert das?

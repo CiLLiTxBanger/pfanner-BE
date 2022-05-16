@@ -15,6 +15,11 @@
 5. Mac Users need to run 
    "brew install mysql" first
 
+### To start the server
+```
+.\env\Scripts\activate
+py manage.py runserver
+```
 ### To create migrations
 ```
 python manage.py makemigrations
@@ -24,6 +29,9 @@ python manage.py migrate
 ```
 py manage.py loaddata AcidMeasurement.json Disease.json FlavorMeasurement.json FrostSensitivity.json GrowthHabit.json Location.json Precipitation.json Season.json StrengthMeasurement.json SugarMeasurement.json Temperature.json Variety.json YieldHabit.json Tree.json OrchardMeasurement.json DiseaseMeasurement.json LabMeasurement.json Image.json
 ```
+db: pfannerobstgartendb
+user: pfanner
+pw: pfannerAdmin2022
 
 
 

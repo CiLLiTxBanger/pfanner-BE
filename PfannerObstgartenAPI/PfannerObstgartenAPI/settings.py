@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,10 +79,10 @@ WSGI_APPLICATION = 'PfannerObstgartenAPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sstud111_pfannerobstgartenapi',
-        'USER': 'sstud1111',
-        'PASSWORD': '1111',
-        'HOST': '111',
+        'NAME': 'sstud182_pfannerobstgartenapi',
+        'USER': 'sstud182_4',
+        'PASSWORD': 'fV2QQj3Et4zH5m2j',
+        'HOST': 'dedi50.your-server.de',
         'PORT': '3306'
     }
 }
@@ -122,6 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Base url to serve media files
+MEDIA_URL = '/media/'
+# Path where media is stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
