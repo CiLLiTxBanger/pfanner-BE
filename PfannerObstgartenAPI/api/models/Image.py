@@ -1,7 +1,6 @@
 from django.db import models
 
 class Image(models.Model):
-    url = models.CharField(max_length=150, blank=False)
     photo = models.ImageField(
             upload_to ='uploads/',
             blank = True,

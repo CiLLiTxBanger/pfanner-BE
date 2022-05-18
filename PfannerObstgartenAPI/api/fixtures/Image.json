@@ -3,8 +3,7 @@
     "model": "api.Image",
     "pk": 1,
     "fields": {
-      "url": "test/test",
-      "image": "test/test",
+      "image": "media/uploads/test.jpg",
       "orchardMeasurement": "1",
       "variety": "1",
       "created_on": "2000-05-05",
