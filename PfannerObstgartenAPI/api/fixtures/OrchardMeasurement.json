@@ -5,6 +5,7 @@
     "fields": {
       "description": "test",
       "tree": "1",
+      "photo": "*/media/uploads/apple.jpg",
       "frostSensitivity": "1",
       "growthHabit": "1",
       "yieldHabit": "1",

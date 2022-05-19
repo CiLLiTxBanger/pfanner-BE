@@ -10,6 +10,13 @@ class OrchardMeasurement(models.Model):
                     'Tree',
                     on_delete=models.CASCADE
     )
+    photo = models.ForeignKey(
+                    'Image',
+                    on_delete=models.SET_NULL,
+                    default=None,
+                    blank=True,
+                    null=True
+    )
     frostSensitivity = models.ForeignKey('FrostSensitivity', on_delete=models.DO_NOTHING)
     growthHabit = models.ForeignKey('GrowthHabit', on_delete=models.DO_NOTHING)
     yieldHabit = models.ForeignKey('YieldHabit', on_delete=models.DO_NOTHING)

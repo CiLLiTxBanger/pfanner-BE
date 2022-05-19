@@ -3,6 +3,13 @@ from django.db import models
 #Sorte
 class Variety(models.Model):
     name = models.CharField(max_length=100, blank=False)
+    photo = models.ForeignKey(
+                        'Image',
+                        on_delete=models.SET_NULL,
+                        default=None,
+                        blank=True,
+                        null=True
+    )
     blossom = models.CharField(max_length=180, blank=False)
     fruit = models.CharField(max_length=180, blank=False)
     climate = models.CharField(max_length=180, blank=False)

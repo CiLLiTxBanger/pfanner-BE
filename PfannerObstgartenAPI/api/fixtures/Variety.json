@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "TestSorte",
+      "photo": "*/media/uploads/apple.jpg",
       "blossom": "TestBlüte",
       "fruit": "Apfel",
       "climate": "Warm",
@@ -24,6 +25,7 @@
     "pk": 2,
     "fields": {
       "name": "TestSorte2",
+      "photo": "*/media/uploads/apple.jpg",
       "blossom": "TestBlüte2",
       "fruit": "Kiwi",
       "climate": "Warm",
@@ -44,6 +46,7 @@
     "pk": 3,
     "fields": {
       "name": "TestSorte3",
+      "photo": "*/media/uploads/apple.jpg",
       "blossom": "TestBlüte3",
       "fruit": "Hund",
       "climate": "Warm",
