@@ -3,9 +3,8 @@
     "model": "api.Image",
     "pk": 1,
     "fields": {
-      "photo": "media/uploads/test.jpg",
-      "orchardMeasurement": "1",
-      "variety": "1",
+      "photo": "/uploads/apple.jpg",
+      "description": "test alt tag",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }

@@ -10,7 +10,7 @@ class OrchardMeasurement(models.Model):
                     'Tree',
                     on_delete=models.CASCADE
     )
-    photo = models.ForeignKey(
+    image = models.ForeignKey(
                     'Image',
                     on_delete=models.SET_NULL,
                     default=None,

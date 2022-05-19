@@ -3,7 +3,7 @@ from django.db import models
 #Sorte
 class Variety(models.Model):
     name = models.CharField(max_length=100, blank=False)
-    photo = models.ForeignKey(
+    image = models.ForeignKey(
                         'Image',
                         on_delete=models.SET_NULL,
                         default=None,
