@@ -51,6 +51,7 @@ class VarietyByTreeId(APIView):
         treeid = self.get_TreeId(pk)
         variety = self.get_object(treeid[0][0])
         serializer = VarietySerializer(variety)
+        serializer.data['image']['photo'] = request.get_host() + serializer.data['image']['photo']
         return Response(serializer.data)
 
 class VarietyImageTest(generics.RetrieveUpdateAPIView):
