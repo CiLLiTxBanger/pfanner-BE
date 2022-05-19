@@ -10,5 +10,4 @@ class TreeSerializer(serializers.ModelSerializer):
         fields = ['url', 'id', 'type', 'variety', 'row', 'column', 'planted_on', 'location', 'organic', 'latitude', 'longitude', 'cut', 'active', 'owner', 'created_on', 'edited_on']
         #read_only_fields = ['url', 'owner'] 
         
-        #Ist das relevant?
-        #depth = 1 oder 2 probieren
+        depth = 0
