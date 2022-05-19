@@ -54,6 +54,23 @@ class VarietyByTreeId(APIView):
         serializer.data['image']['photo'] = request.get_host() + serializer.data['image']['photo']
         return Response(serializer.data)
 
+class ImageList(generics.ListCreateAPIView):
+    """
+    List all images, or create a new image. Im moment noch alles ohne Authentification möglich.
+    """
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+class ImageDetail(generics.RetrieveUpdateAPIView):
+    """
+    Retrieve or update a image. Im moment noch alles ohne Authentification möglich.
+    """
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+    parser_classes = (MultiPartParser, FormParser)
+    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
 class VarietyImageTest(generics.RetrieveUpdateAPIView):
     queryset = Image.objects.order_by('created_on')
     serializer_class = ImageSerializer
