@@ -7,8 +7,64 @@
       "tree": "1",
       "strengthMeasurement": "1",
       "flavorMeasurement": "1",
-      "acidMeasurement": "1",
+      "acidMeasurement": "2",
+      "sugarMeasurement": "5",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }, 
+  {
+    "model": "api.LabMeasurement",
+    "pk": 2,
+    "fields": {
+      "timestamp": "2001-04-04",
+      "tree": "1",
+      "strengthMeasurement": "6",
+      "flavorMeasurement": "2",
+      "acidMeasurement": "2",
       "sugarMeasurement": "1",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }, 
+  {
+    "model": "api.LabMeasurement",
+    "pk": 3,
+    "fields": {
+      "timestamp": "2001-04-04",
+      "tree": "1",
+      "strengthMeasurement": "2",
+      "flavorMeasurement": "3",
+      "acidMeasurement": "3",
+      "sugarMeasurement": "4",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }, 
+  {
+    "model": "api.LabMeasurement",
+    "pk": 4,
+    "fields": {
+      "timestamp": "2001-04-04",
+      "tree": "1",
+      "strengthMeasurement": "3",
+      "flavorMeasurement": "2",
+      "acidMeasurement": "4",
+      "sugarMeasurement": "3",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+{
+    "model": "api.LabMeasurement",
+    "pk": 5,
+    "fields": {
+      "timestamp": "2001-04-04",
+      "tree": "1",
+      "strengthMeasurement": "4",
+      "flavorMeasurement": "1",
+      "acidMeasurement": "5",
+      "sugarMeasurement": "2",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }

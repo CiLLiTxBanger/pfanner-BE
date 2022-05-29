@@ -3,7 +3,25 @@
     "model": "api.FrostSensitivity",
     "pk": 1,
     "fields": {
-      "scale": "hoch",
+      "scale": "Gering",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+  {
+    "model": "api.FrostSensitivity",
+    "pk": 2,
+    "fields": {
+      "scale": "Mittel",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+  {
+    "model": "api.FrostSensitivity",
+    "pk": 3,
+    "fields": {
+      "scale": "Hoch",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }

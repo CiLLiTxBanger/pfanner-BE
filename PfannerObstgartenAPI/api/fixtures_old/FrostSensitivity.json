@@ -1,0 +1,11 @@
+[
+  {
+    "model": "api.FrostSensitivity",
+    "pk": 1,
+    "fields": {
+      "scale": "hoch",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }
+]

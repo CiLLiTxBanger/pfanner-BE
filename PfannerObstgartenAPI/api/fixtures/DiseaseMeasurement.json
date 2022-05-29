@@ -3,9 +3,53 @@
     "model": "api.DiseaseMeasurement",
     "pk": 1,
     "fields": {
-      "value": "Viel",
+      "value": "Gering",
       "orchardMeasurement": "1",
+      "disease": "3",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }, 
+  {
+    "model": "api.DiseaseMeasurement",
+    "pk": 2,
+    "fields": {
+      "value": "Mittel",
+      "orchardMeasurement": "2",
+      "disease": "2",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }, 
+  {
+    "model": "api.DiseaseMeasurement",
+    "pk": 3,
+    "fields": {
+      "value": "Hoch",
+      "orchardMeasurement": "3",
       "disease": "1",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }, 
+  {
+    "model": "api.DiseaseMeasurement",
+    "pk": 4,
+    "fields": {
+      "value": "Gering",
+      "orchardMeasurement": "4",
+      "disease": "4",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }, 
+  {
+    "model": "api.DiseaseMeasurement",
+    "pk": 5,
+    "fields": {
+      "value": "Hoch",
+      "orchardMeasurement": "5",
+      "disease": "5",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }
