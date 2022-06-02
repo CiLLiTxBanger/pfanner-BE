@@ -3,7 +3,61 @@
     "model": "api.SugarMeasurement",
     "pk": 1,
     "fields": {
-      "scale": "0.6",
+      "scale": "11.67",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+ {
+    "model": "api.SugarMeasurement",
+    "pk": 2,
+    "fields": {
+      "scale": "11.42",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+ {
+    "model": "api.SugarMeasurement",
+    "pk": 3,
+    "fields": {
+      "scale": "11.25",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+ {
+    "model": "api.SugarMeasurement",
+    "pk": 3,
+    "fields": {
+      "scale": "9.96",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+ {
+    "model": "api.SugarMeasurement",
+    "pk": 4,
+    "fields": {
+      "scale": "13.37",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+ {
+    "model": "api.SugarMeasurement",
+    "pk": 5,
+    "fields": {
+      "scale": "11.71",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+ {
+    "model": "api.SugarMeasurement",
+    "pk": 6,
+    "fields": {
+      "scale": "12.56",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }

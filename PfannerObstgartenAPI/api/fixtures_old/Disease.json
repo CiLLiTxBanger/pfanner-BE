@@ -1,0 +1,12 @@
+[
+  {
+    "model": "api.Disease",
+    "pk": 1,
+    "fields": {
+      "name": "Durchfall",
+      "scale": "Viel",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "model": "api.Location",
+    "pk": 1,
+    "fields": {
+      "city": "Wien",
+      "country": "Austria",
+      "description": "WIEEEEN",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  }
+]

@@ -41,15 +41,8 @@ class VarietyByTreeId(APIView):
         except Variety.DoesNotExist:
             raise Http404
 
-    def get_TreeId(self, pk):
-        try:
-            return Tree.objects.filter(pk=pk).values_list('id')
-        except Tree.DoesNotExist:
-            raise Http404
-
     def get(self, request, pk, format=None):
-        treeid = self.get_TreeId(pk)
-        variety = self.get_object(treeid[0][0])
+        variety = self.get_object(pk)
         serializer = VarietySerializer(variety)
         serializer.data['image']['photo'] = request.get_host() + serializer.data['image']['photo']
         return Response(serializer.data)

@@ -3,8 +3,48 @@
     "model": "api.Disease",
     "pk": 1,
     "fields": {
-      "name": "Durchfall",
-      "scale": "Viel",
+      "name": "Schorf",
+      "scale": "Hoch",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+  {
+    "model": "api.Disease",
+    "pk": 2,
+    "fields": {
+      "name": "Apfelwickler",
+      "scale": "Ja",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+  {
+    "model": "api.Disease",
+    "pk": 3,
+    "fields": {
+      "name": "Mehlige Apfelblattlaus",
+      "scale": "Gering",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+  {
+    "model": "api.Disease",
+    "pk": 4,
+    "fields": {
+      "name": "Schorf",
+      "scale": "Gering",
+      "created_on": "2000-05-05",
+      "edited_on": "2000-05-05"
+    }
+  },
+  {
+    "model": "api.Disease",
+    "pk": 5,
+    "fields": {
+      "name": "Grüne Apfelblattlaus",
+      "scale": "Mittel",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }
