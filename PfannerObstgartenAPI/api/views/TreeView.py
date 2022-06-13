@@ -13,7 +13,7 @@ class TreeList(generics.ListCreateAPIView):
     """
     queryset = Tree.objects.all()
     serializer_class = TreeSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
         queryset = Tree.objects.filter(column=self.request.data['column'], row=self.request.data['row'], location=self.request.data['location'], active = 1)
@@ -24,8 +24,8 @@ class TreeList(generics.ListCreateAPIView):
 
 class TreeDetail(generics.RetrieveUpdateAPIView):
     """
-    Retrieve, update or delete a Tree.
+    Retrieve or update a Tree.
     """
-   # permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Tree.objects.all()
     serializer_class = TreeSerializer

@@ -16,16 +16,19 @@ def api_root(request, format=None):
         'users': reverse('user-list', request=request, format=format),
         'trees': reverse('tree-list', request=request, format=format),
         'varieties': reverse('variety-list', request=request, format=format),
-        'locations': reverse('location-list', request=request, format=format)
+        'locations': reverse('location-list', request=request, format=format),
+        'images': reverse('image-list', request=request, format=format),
     })
 
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class UserDetail(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 
