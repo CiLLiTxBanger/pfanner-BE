@@ -11,7 +11,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
 from api.serializers import ImageSerializer
-from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.decorators import api_view
 
 
@@ -23,13 +23,20 @@ class VarietyList(generics.ListCreateAPIView):
     serializer_class = VarietySerializer
     #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class VarietyDetail(generics.RetrieveUpdateAPIView):
+class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Retrieve, update or delete a Variety. Im moment noch alles ohne Authentification möglich.
     """
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer
     #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def perform_destroy(self, instance):
+        variety = self.get_object()
+        variety.image.delete()
+        return super().perform_destroy(instance)
+
+        
 
 class VarietyByTreeId(APIView):
     """
@@ -49,37 +56,35 @@ class VarietyByTreeId(APIView):
 
 class ImageList(generics.ListCreateAPIView):
     """
-    List all images, or create a new image. Im moment noch alles ohne Authentification möglich.
+    List all images, or create an image. Im moment noch alles ohne Authentification möglich.
     """
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
     #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class ImageDetail(generics.RetrieveUpdateAPIView):
+class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve or update a image. Im moment noch alles ohne Authentification möglich.
+    Retrieve or update an image. Im moment noch alles ohne Authentification möglich.
     """
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
-    parser_classes = (MultiPartParser, FormParser)
+    parser_classes = (JSONParser, MultiPartParser, FormParser)
     #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class VarietyImageTest(generics.RetrieveUpdateAPIView):
-    queryset = Image.objects.order_by('created_on')
-    serializer_class = ImageSerializer
-    parser_classes = (MultiPartParser, FormParser)
+class VarietyImageTest(generics.ListCreateAPIView):
+    queryset = Variety.objects.order_by('created_on')
+    serializer_class = VarietySerializer
+    parser_classes = (JSONParser, MultiPartParser, FormParser)
     #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self, request):
-        all_images = Image.objects.all()
-        serializer = ImageSerializer(all_images, many=True)
+        all_varieties = Variety.objects.all()
+        serializer = VarietySerializer(all_varieties, many=True)
         return Response(serializer.data)
 
     def post(self, request, format=None):
-        serializer = ImageSerializer(data=request.data)
+        serializer = VarietySerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(
-                photo=request.data.get('photo')
-            )
+            serializer.save()
             return Response(data=serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

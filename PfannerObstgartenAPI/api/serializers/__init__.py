@@ -2,7 +2,6 @@ from .TreeSerializer import TreeSerializer
 from .LocationSerializer import LocationSerializer
 from .ImageSerializer import ImageSerializer
 from .VarietySerializer import VarietySerializer
-from .VarietySerializer import WriteVarietySerializer
 from .AcidMeasurementSerializer import AcidMeasurementSerializer
 from .DiseaseSerializer import DiseaseSerializer
 from .DiseaseMeasurementSerializer import DiseaseMeasurement
