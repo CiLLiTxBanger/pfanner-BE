@@ -24,4 +24,3 @@ class OrchardMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = OrchardMeasurement.objects.all()
     serializer_class = OrchardMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
-    #permission_classes = [admin]

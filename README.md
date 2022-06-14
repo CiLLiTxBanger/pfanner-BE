@@ -1,3 +1,6 @@
+# start prod server
+sudo uwsgi --emperor /etc/uwsgi/vassals/ --uid www-data --gid www-data
+
 # pfanner-BE setup Guide
 
 1. Create a virtual environment 
@@ -32,9 +35,6 @@ py manage.py loaddata AcidMeasurement.json Disease.json FlavorMeasurement.json F
 db: pfannerobstgartendb
 user: pfanner
 pw: pfannerAdmin2022
-
-
-
 
 
 Setup auf Server:
