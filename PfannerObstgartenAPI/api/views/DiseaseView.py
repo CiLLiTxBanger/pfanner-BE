@@ -16,7 +16,7 @@ class DiseaseList(generics.CreateAPIView, generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
 
-class DiseaseMeasurementList(APIView):
+class DiseaseMeasurementByOrchardMeasurementList(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(request, self, orchardMeasurementId, format=None):

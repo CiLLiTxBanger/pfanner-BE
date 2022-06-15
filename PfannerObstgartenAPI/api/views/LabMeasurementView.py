@@ -23,6 +23,11 @@ class LabMeasurementListByTreeId(APIView):
         if serializer.is_valid(raise_exception=True):
             labMeasurement_saved = serializer.save()
         return Response({"success": "Success!"})
+        
+class LabMeasurementList(generics.ListCreateAPIView):
+    queryset = LabMeasurement.objects.all()
+    serializer_class = LabMeasurementSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
 class LabMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = LabMeasurement.objects.all()

@@ -18,6 +18,10 @@ def api_root(request, format=None):
         'varieties': reverse('variety-list', request=request, format=format),
         'locations': reverse('location-list', request=request, format=format),
         'images': reverse('image-list', request=request, format=format),
+        'labmeasurements': reverse('labmeasurement-list', request=request, format=format),
+        'orchardmeasurements': reverse('orchardmeasurement-list', request=request, format=format),
+        'diseases': reverse('disease-list', request=request, format=format),
+        'diseasemeasurements': reverse('diseasemeasurement-list', request=request, format=format),
     })
 
 class UserList(generics.ListAPIView):
