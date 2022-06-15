@@ -1,5 +1,10 @@
 # start prod server
-sudo uwsgi --emperor /etc/uwsgi/vassals/ --uid www-data --gid www-data
+nginx starten
+- `systemctl start/restart/status nginx.service`<br>
+- `/etc/init.d/nginx start` <br>
+
+wsgi starten
+- `sudo uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data`
 
 # pfanner-BE setup Guide
 

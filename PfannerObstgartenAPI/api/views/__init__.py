@@ -6,3 +6,4 @@ from .OrchardMeasurementView import *
 from .LabMeasurementView import *
 from .TreeView import *
 from .ImageView import *
+from .DiseaseView import *

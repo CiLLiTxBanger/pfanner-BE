@@ -20,8 +20,11 @@ urlpatterns = [
      path('api/trees/<int:treeId>/orchardmeasurements/', views.OrchardMeasurementView.OrchardMeasurementListByTreeId.as_view(), name='orchardmeasurementbytreeid-list'),
      path('api/orchardmeasurements/', views.OrchardMeasurementView.OrchardMeasurementList.as_view(), name='orchardmeasurement-list'),
      path('api/orchardmeasurements/<int:pk>/', views.OrchardMeasurementView.OrchardMeasurementDetail.as_view(), name='orchardmeasurement-detail'),
-     path('api/trees/<int:treeId>/labmeasurements/', views.LabMeasurementView.LabMeasurementList.as_view(), name='labmeasurement-list'),
+     path('api/trees/<int:treeId>/labmeasurements/', views.LabMeasurementView.LabMeasurementListByTreeId.as_view(), name='labmeasurement-list'),
      path('api/labmeasurements/<int:pk>/', views.LabMeasurementView.LabMeasurementDetail.as_view(), name='labmeasurement-detail'),
+     path('api/diseases/', views.DiseaseView.DiseaseList.as_view(), name='disease-list'),
+     path('api/diseasemeasurements/', views.DiseaseView.DiseaseMeasurementList.as_view(), name='diseasemeasurement-list'),
+     path('api/orchardmeasurements/<int:orchardMeasurementId>/diseasemeasurements', views.DiseaseView.DiseaseMeasurementList.as_view(), name='diseasemeasurement-list'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 urlpatterns = format_suffix_patterns(urlpatterns)

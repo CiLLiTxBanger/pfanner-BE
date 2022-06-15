@@ -15,7 +15,7 @@ class VarietyList(generics.ListCreateAPIView):
     """
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+#     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     """

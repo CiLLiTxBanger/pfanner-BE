@@ -6,8 +6,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions
 
-class LabMeasurementList(APIView):
-    #serializer_class = OrchardMeasurementSerializer
+class LabMeasurementListByTreeId(APIView):
+    permission_classes = [permissions.IsAuthenticated]
     def get(request, self, treeId, format=None):
         labMeasurements = LabMeasurement.objects.filter(tree = treeId)
         serializer = LabMeasurementSerializer(labMeasurements, many = True)
@@ -15,7 +15,14 @@ class LabMeasurementList(APIView):
         #permission_classes = [admin]
         return Response(serializer.data)
 
-
+    def post(request, self, treeId):
+        labMeasurement = self.data
+        #Create LabMeasurement from above data
+        serializer = LabMeasurementSerializer(data=labMeasurement)
+        permission_classes = [permissions.IsAuthenticated]
+        if serializer.is_valid(raise_exception=True):
+            labMeasurement_saved = serializer.save()
+        return Response({"success": "Success!"})
 
 class LabMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = LabMeasurement.objects.all()

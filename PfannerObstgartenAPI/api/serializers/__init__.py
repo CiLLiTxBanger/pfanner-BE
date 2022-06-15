@@ -4,8 +4,8 @@ from .ImageSerializer import ImageSerializer
 from .VarietySerializer import VarietySerializer
 from .AcidMeasurementSerializer import AcidMeasurementSerializer
 from .DiseaseSerializer import DiseaseSerializer
-from .DiseaseMeasurementSerializer import DiseaseMeasurement
-from .FlavorMeasurementSerializer import FlavorMeasurement
+from .DiseaseMeasurementSerializer import DiseaseMeasurementSerializer
+from .FlavorMeasurementSerializer import FlavorMeasurementSerializer
 from .FrostSensivitySerializer import FrostSensitivitySerializer
 from .GrowthHabitSerializer import GrowthHabitSerializer
 from .LabMeasurementSerializer import LabMeasurementSerializer
