@@ -1,6 +1,8 @@
+import re
+from webbrowser import get
 from rest_framework import permissions
-from api.models import Variety
-from api.serializers import VarietySerializer
+from api.models import Variety, Image
+from api.serializers import VarietySerializer, ImageSerializer
 from rest_framework import generics
 from rest_framework import permissions
 from rest_framework.views import APIView
@@ -15,7 +17,6 @@ class VarietyList(generics.ListCreateAPIView):
     """
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer
-#     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     """
@@ -24,11 +25,6 @@ class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-    def perform_destroy(self, instance):
-        variety = self.get_object()
-        variety.image.delete()
-        return super().perform_destroy(instance) 
 
 class VarietyByTreeId(APIView):
     """
@@ -43,5 +39,5 @@ class VarietyByTreeId(APIView):
     def get(self, request, pk, format=None):
         variety = self.get_object(pk)
         serializer = VarietySerializer(variety)
-        serializer.data['image']['photo'] = request.get_host() + serializer.data['image']['photo']
+        #serializer.data['image_photo'] = request.get_host() + serializer.data['image_photo']
         return Response(serializer.data)
