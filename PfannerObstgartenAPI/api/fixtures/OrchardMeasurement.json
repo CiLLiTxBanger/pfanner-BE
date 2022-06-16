@@ -5,7 +5,8 @@
     "fields": {
       "description": "test",
       "tree": "1",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
       "frostSensitivity": "1",
       "growthHabit": "1",
       "yieldHabit": "1",
@@ -16,13 +17,14 @@
       "edited_on": "2000-05-05"
     }
   },
-{
+  {
     "model": "api.OrchardMeasurement",
     "pk": 2,
     "fields": {
       "description": "testBeschreibung",
       "tree": "2",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
       "frostSensitivity": "1",
       "growthHabit": "1",
       "yieldHabit": "1",
@@ -33,13 +35,14 @@
       "edited_on": "2000-05-05"
     }
   },
-{
+  {
     "model": "api.OrchardMeasurement",
     "pk": 3,
     "fields": {
       "description": "Neue Beschreibung Test",
       "tree": "3",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
       "frostSensitivity": "1",
       "growthHabit": "1",
       "yieldHabit": "1",
@@ -50,13 +53,14 @@
       "edited_on": "2000-05-05"
     }
   },
-{
+  {
     "model": "api.OrchardMeasurement",
     "pk": 4,
     "fields": {
       "description": "Neue Beschreibung",
       "tree": "4",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
       "frostSensitivity": "1",
       "growthHabit": "1",
       "yieldHabit": "1",
@@ -67,13 +71,14 @@
       "edited_on": "2000-05-05"
     }
   },
-{
+  {
     "model": "api.OrchardMeasurement",
     "pk": 5,
     "fields": {
       "description": "Test Beschreibung",
       "tree": "5",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
       "frostSensitivity": "1",
       "growthHabit": "1",
       "yieldHabit": "1",
@@ -84,13 +89,14 @@
       "edited_on": "2000-05-05"
     }
   },
-{
+  {
     "model": "api.OrchardMeasurement",
     "pk": 6,
     "fields": {
       "description": "testBeschreibung Neu",
       "tree": "5",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
       "frostSensitivity": "1",
       "growthHabit": "1",
       "yieldHabit": "1",
