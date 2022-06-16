@@ -4,7 +4,8 @@
     "pk": 1,
     "fields": {
       "name": "Geflammter Cousinot",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Bildbeschreibung",
       "blossom": "mittelfrüh, lange anhaltend, unempfindlich",
       "fruit": "mittelgroß, mittellanger Stiel, dick, Stielgrube mitteltief, mürbe",
       "climate": "robust",
@@ -25,7 +26,8 @@
     "pk": 2,
     "fields": {
       "name": "Goldlange",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Bildbeschreibung",
       "blossom": "April bis Mai",
       "fruit": "fest, kurzer Stiel, sehr groß, Stielgrube weit, knackig",
       "climate": "sonnig bis halbschattiger Standort, nährstoffreicher, durchlässiger Boden",
@@ -46,7 +48,8 @@
     "pk": 3,
     "fields": {
       "name": "Berner Rosen",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Bildbeschreibung",
       "blossom": "lang anhaltend, nicht empfindlich, guter Pollenspender",
       "fruit": "mittelgroß, unterschiedlich, kurzer, dicker Stiel",
       "climate": "nährstoffreicher, feuchter Boden",
@@ -67,7 +70,8 @@
     "pk": 4,
     "fields": {
       "name": "Bismarckapfel",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Bildbeschreibung",
       "blossom": "spät, lange anhaltend, nicht empfindlich",
       "fruit": "groß und schwer, dicke Schale, flach bis hochkugelig",
       "climate": "geschützte Lagen, nährstoffreicher, durchlässiger Boden, höhere Lagen",
@@ -88,7 +92,8 @@
     "pk": 5,
     "fields": {
       "name": "Maigold",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Bildbeschreibung",
       "blossom": "mittelfrüh, diploid, Pollen gut, teilweise selbstfruchtbar",
       "fruit": "mittel bis groß, knackig, ungelichmäßig Stielgrube, tief",
       "climate": "viel Wärme- und Lichtbedarf, hoher Pflegebedarf",
@@ -109,7 +114,8 @@
     "pk": 6,
     "fields": {
       "name": "Brünnerling",
-      "image": "1",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Bildbeschreibung",
       "blossom": "frühe Blüte, frostempfindlich",
       "fruit": "groß, schwer, kurzer Stiel, mitteldick, Stielbucht flach bis mitteltief",
       "climate": "frosttolerant, geringe Ansprüche, freie, kühlere Lagen möglich",
