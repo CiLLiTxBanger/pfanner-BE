@@ -12,7 +12,7 @@
     "model": "api.Season",
     "pk": 2,
     "fields": {
-      "scale": "sommer",
+      "scale": "summer",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }

@@ -12,7 +12,7 @@ class ImageList(generics.ListCreateAPIView):
     """
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
 
 class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
     """
