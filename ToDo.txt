@@ -1,10 +1,12 @@
 ToDo:
 
-Bei Labormessung und Obstgartenmessung jeweils ein "Abgeschlossen" Feld dazu speichern
-Labormessungen und Obstgartenmessungen eigene Tabellen für Skalen entfernen
+Bei Labormessung und Obstgartenmessung jeweils ein "Abgeschlossen" Feld dazu speichern --> jo
+Labormessungen und Obstgartenmessungen eigene Tabellen für Skalen entfernen --> jo
 
-Bei Diseasemeasurement --> alle daringehörigen Disease Informationen ausgeben
+Bei Diseasemeasurement --> alle daringehörigen Disease Informationen ausgeben --> florian
 
-Bei Orchardmeasurement --> Feld für Niederschlag vergessen (trocken, normal, feucht)
+Bei Orchardmeasurement --> Feld für Niederschlag vergessen (trocken, normal, feucht) --> jo
 
-Variety erstellen, Pfad und Beschreibung auf gleicher Ebene
+Variety erstellen, Pfad und Beschreibung auf gleicher Ebene --> florian
+
+Datenbank umbauen --> jo
