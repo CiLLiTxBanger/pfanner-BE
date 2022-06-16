@@ -7,6 +7,7 @@ Bei Diseasemeasurement --> alle daringehörigen Disease Informationen ausgeben -
 
 Bei Orchardmeasurement --> Feld für Niederschlag vergessen (trocken, normal, feucht) --> jo
 
-Variety erstellen, Pfad und Beschreibung auf gleicher Ebene --> florian
+Variety erstellen, Pfad und Beschreibung auf gleicher Ebene --> florian, erledigt.
+Orchardmeasurement erstellen, Bildpfad und Beschreibung auf gleicher Ebene --> florian, erledigt.
 
 Datenbank umbauen --> jo

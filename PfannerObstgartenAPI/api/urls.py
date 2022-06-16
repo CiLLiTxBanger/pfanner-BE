@@ -24,6 +24,7 @@ urlpatterns = [
      path('api/labmeasurements/<int:pk>/', views.LabMeasurementView.LabMeasurementDetail.as_view(), name='labmeasurement-detail'),
      path('api/labmeasurements/', views.LabMeasurementView.LabMeasurementList.as_view(), name='labmeasurement-list'),
      path('api/diseases/', views.DiseaseView.DiseaseList.as_view(), name='disease-list'),
+     path('api/diseases/<int:pk>', views.DiseaseView.DiseaseDetail.as_view(), name='disease-detail'),
      path('api/diseasemeasurements/', views.DiseaseView.DiseaseMeasurementList.as_view(), name='diseasemeasurement-list'),
      path('api/orchardmeasurements/<int:orchardMeasurementId>/diseasemeasurements', views.DiseaseView.DiseaseMeasurementByOrchardMeasurementList.as_view(), name='diseasemeasurementbyorchardmeasurement-list'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

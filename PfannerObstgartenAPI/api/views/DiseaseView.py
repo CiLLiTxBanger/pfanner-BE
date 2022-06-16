@@ -1,5 +1,5 @@
 from api.serializers import DiseaseSerializer
-from api.serializers import DiseaseMeasurementSerializer
+from api.serializers import DiseaseMeasurementSerializer, WriteDiseaseMeasurementSerializer
 
 from api.models import Disease
 from api.models import DiseaseMeasurement
@@ -15,7 +15,7 @@ class DiseaseList(generics.CreateAPIView, generics.ListAPIView):
     serializer_class = DiseaseSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
+class DiseaseDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Retrieve or update a Disease.
     """
@@ -34,5 +34,17 @@ class DiseaseMeasurementByOrchardMeasurementList(APIView):
 
 class DiseaseMeasurementList(generics.ListCreateAPIView):
     queryset = DiseaseMeasurement.objects.all()
-    serializer_class = DiseaseMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return WriteDiseaseMeasurementSerializer
+        return DiseaseMeasurementSerializer
+
+class DiseaseMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Retrieve or update a Disease.
+    """
+    queryset = DiseaseMeasurement.objects.all()
+    serializer_class = DiseaseMeasurementSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
