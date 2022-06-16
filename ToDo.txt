@@ -1,17 +1,10 @@
-Offene Fragen:
+ToDo:
 
-Tree -> Constraint, wie realisieren? Active wird beim Baum auf 0 gesetzt wenn er stirbt, damit dieser nicht gelöscht wird? Wie dann constraints auf location row und column realisieren?
+Bei Labormessung und Obstgartenmessung jeweils ein "Abgeschlossen" Feld dazu speichern
+Labormessungen und Obstgartenmessungen eigene Tabellen für Skalen entfernen
 
+Bei Diseasemeasurement --> alle daringehörigen Disease Informationen ausgeben
 
+Bei Orchardmeasurement --> Feld für Niederschlag vergessen (trocken, normal, feucht)
 
-Beziehungen anschauen, passen diese soweit?
-
-
-Krankheitsanfälligeit bei Variety Tabelle? Nicht benötigt? In dem Sortenbeschreibungsfile von Pfanner ist das drinnen.
-
-
-ToDo: // NEXT STEPS:
-View location
-Funktioniert Images auf den Server hochladen?
-Views aufsplitten
-Authentifizierung - wie funktioniert das?
+Variety erstellen, Pfad und Beschreibung auf gleicher Ebene
