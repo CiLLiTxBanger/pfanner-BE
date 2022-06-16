@@ -26,8 +26,8 @@
     "pk": 2,
     "fields": {
       "name": "Goldlange",
-      "image_photo": "/uploads/pinova.jpg",
-      "image_description": "Bildbeschreibung",
+      "image_photo": "/uploads/brilliant.jpg",
+      "image_description": "Brilliant",
       "blossom": "April bis Mai",
       "fruit": "fest, kurzer Stiel, sehr groß, Stielgrube weit, knackig",
       "climate": "sonnig bis halbschattiger Standort, nährstoffreicher, durchlässiger Boden",
@@ -65,7 +65,7 @@
       "edited_on": "2000-05-05"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 4,
     "fields": {
@@ -87,7 +87,7 @@
       "edited_on": "2000-05-05"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 5,
     "fields": {
@@ -109,7 +109,7 @@
       "edited_on": "2000-05-05"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 6,
     "fields": {

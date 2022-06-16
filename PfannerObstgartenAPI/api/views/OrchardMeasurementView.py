@@ -24,8 +24,3 @@ class OrchardMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = OrchardMeasurement.objects.all()
     serializer_class = OrchardMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
-
-    def perform_destroy(self, instance):
-            orchardMeasurement = self.get_object()
-            orchardMeasurement.image.delete()
-            return super().perform_destroy(instance)

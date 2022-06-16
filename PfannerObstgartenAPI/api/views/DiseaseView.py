@@ -15,6 +15,14 @@ class DiseaseList(generics.CreateAPIView, generics.ListAPIView):
     serializer_class = DiseaseSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+class ImageDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Retrieve or update a Disease.
+    """
+    queryset = Disease.objects.all()
+    serializer_class = DiseaseSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
 
 class DiseaseMeasurementByOrchardMeasurementList(APIView):
     permission_classes = [permissions.IsAuthenticated]
