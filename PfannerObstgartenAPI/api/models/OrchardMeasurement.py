@@ -4,25 +4,26 @@ import os
 class OrchardMeasurement(models.Model):
 
     PROBABILITY_CHOICES = [
-            ("Viel", "Viel"),
-            ("Mittel", "Mittel"),
-            ("Wenig", "Wenig"),
+            ("low", "low"),
+            ("medium", "medium"),
+            ("high", "high"),
+            ("veryHigh", "veryHigh"),
     ]
     SEASON_CHOICES = [
-                ("Frühling", "Frühling"),
-                ("Sommer", "Sommer"),
-                ("Herbst", "Herbst"),
-                ("Winter", "Winter"),
+                ("spring", "spring"),
+                ("summer", "summer"),
+                ("fall", "fall"),
+                ("winter", "winter"),
     ]
     PRECIPITATION_CHOICES = [
-                ("Trocken", "Trocken"),
-                ("Normal", "Normal"),
-                ("Feucht", "Feucht"),
+                ("dry", "dry"),
+                ("normal", "normal"),
+                ("wet", "wet"),
         ]
     TEMPERATURE_CHOICES = [
-                ("Kalt", "Kalt"),
-                ("Mittel", "Mittel"),
-                ("Warm", "Warm"),
+                ("cold", "cold"),
+                ("medium", "medium"),
+                ("warm", "warm"),
         ]
 
     description = models.TextField()
