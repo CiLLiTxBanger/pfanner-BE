@@ -1,4 +1,4 @@
-from .TreeSerializer import TreeSerializer
+from .TreeSerializer import TreeSerializer, WriteTreeSerializer
 from .LocationSerializer import LocationSerializer
 from .ImageSerializer import ImageSerializer
 from .VarietySerializer import VarietySerializer

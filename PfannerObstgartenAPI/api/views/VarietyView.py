@@ -9,6 +9,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import Http404
 from rest_framework.decorators import api_view
+from rest_framework import filters
 
 
 class VarietyList(generics.ListCreateAPIView):
@@ -17,6 +18,8 @@ class VarietyList(generics.ListCreateAPIView):
     """
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'blossom', 'fruit', 'climate', 'pick_maturity', 'usage', 'pollinator', 'properties', 'output', 'disease_possibility', 'description']
 
 class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     """

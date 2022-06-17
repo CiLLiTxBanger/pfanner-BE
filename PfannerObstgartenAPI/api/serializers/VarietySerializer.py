@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from api.models import Variety, Image
-from api.serializers.ImageSerializer import ImageSerializer
+from api.models import Variety
 
 
 class VarietySerializer(serializers.ModelSerializer):

@@ -1,13 +1,16 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from api.models import Tree, Variety, Location
+from api.models import Tree
+from api.serializers.VarietySerializer import VarietySerializer
 
 class TreeSerializer(serializers.ModelSerializer):
-    #owner = serializers.ReadOnlyField(source='owner.username')
+    variety = VarietySerializer()
 
     class Meta:
         model = Tree
-        fields = ['url', 'id', 'type', 'variety', 'row', 'column', 'planted_on', 'location', 'organic', 'latitude', 'longitude', 'cut', 'active', 'owner', 'created_on', 'edited_on']
-        #read_only_fields = ['url', 'owner'] 
-        
-        depth = 0
+        fields = ['id', 'type', 'variety', 'row', 'column', 'planted_on', 'location', 'organic', 'latitude', 'longitude', 'cut', 'active', 'created_on', 'edited_on']
+
+class WriteTreeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tree
+        fields = ['id', 'type', 'variety', 'row', 'column', 'planted_on', 'location', 'organic', 'latitude', 'longitude', 'cut', 'active', 'created_on', 'edited_on']
