@@ -8,7 +8,7 @@ from .DiseaseMeasurementSerializer import DiseaseMeasurementSerializer, WriteDis
 from .FlavorMeasurementSerializer import FlavorMeasurementSerializer
 from .FrostSensivitySerializer import FrostSensitivitySerializer
 from .GrowthHabitSerializer import GrowthHabitSerializer
-from .LabMeasurementSerializer import LabMeasurementSerializer
+from .LabMeasurementSerializer import LabMeasurementSerializer, WriteLabMeasurementSerializer
 from .OrchardMeasurementSerializer import OrchardMeasurementSerializer
 from .PrecipitationSerializer import PrecipitationSerializer
 from .SeasonSerializer import SeasonSerializer

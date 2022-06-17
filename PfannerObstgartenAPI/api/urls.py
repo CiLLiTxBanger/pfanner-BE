@@ -27,6 +27,7 @@ urlpatterns = [
      path('api/diseases/<int:pk>', views.DiseaseView.DiseaseDetail.as_view(), name='disease-detail'),
      path('api/diseasemeasurements/', views.DiseaseView.DiseaseMeasurementList.as_view(), name='diseasemeasurement-list'),
      path('api/orchardmeasurements/<int:orchardMeasurementId>/diseasemeasurements', views.DiseaseView.DiseaseMeasurementByOrchardMeasurementList.as_view(), name='diseasemeasurementbyorchardmeasurement-list'),
+     path('api/trees/filterbylabmeasurementstats/', views.LabMeasurementView.TreesFilteredByLabMeasurementStats.as_view(), name='treesfilteredbylabmeasurementstats-list'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 urlpatterns = format_suffix_patterns(urlpatterns)
