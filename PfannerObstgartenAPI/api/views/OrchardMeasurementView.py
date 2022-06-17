@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from api.serializers import OrchardMeasurementSerializer
+from api.serializers import OrchardMeasurementSerializer, WriteOrchardMeasurementSerializer
 from api.models import OrchardMeasurement
 from rest_framework import generics
 from rest_framework.decorators import api_view
@@ -20,7 +20,17 @@ class OrchardMeasurementList(generics.ListCreateAPIView):
     serializer_class = OrchardMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return WriteOrchardMeasurementSerializer
+        return OrchardMeasurementSerializer
+
 class OrchardMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = OrchardMeasurement.objects.all()
     serializer_class = OrchardMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_serializer_class(self):
+        if self.request.method == 'PUT':
+            return WriteOrchardMeasurementSerializer
+        return OrchardMeasurementSerializer

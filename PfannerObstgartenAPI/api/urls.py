@@ -30,6 +30,7 @@ urlpatterns = [
 #      path('api/trees/<int:treeId>/labmeasurements/csv', views.CsvView.ExportLabMeasurementsCSVByTreeId.as_view(), name='labmeasurement-csv'),
      path('api/trees/<int:treeId>/orchardmeasurements/csv', views.CsvView.ExportOrchardMeasurementsCSVByTreeId.as_view(), name='orchardmeasurement-csv'),
      path('api/trees/filterbylabmeasurementstats/', views.LabMeasurementView.TreesFilteredByLabMeasurementStats.as_view(), name='treesfilteredbylabmeasurementstats-list'),
+     path('api/trees/<int:pk>/analytics', views.TreeView.TreeAnalytics.as_view(), name='tree-analytics'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 urlpatterns = format_suffix_patterns(urlpatterns)

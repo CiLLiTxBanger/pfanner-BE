@@ -7,9 +7,9 @@ class LabMeasurementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = LabMeasurement
-        fields = ['id', 'timestamp', 'tree', 'strengthMeasurement', 'flavorMeasurement', 'acidMeasurement', 'sugarMeasurement', 'status', 'created_on', 'edited_on']
+        fields = ['id', 'timestamp', 'tree', 'strengthMeasurement', 'flavorMeasurement', 'acidMeasurement', 'sugarMeasurement', 'status', 'created_on', 'edited_on', 'status']
 
 class WriteLabMeasurementSerializer(serializers.ModelSerializer):
     class Meta:
         model = LabMeasurement
-        fields = ['id', 'timestamp', 'tree', 'strengthMeasurement', 'flavorMeasurement', 'acidMeasurement', 'sugarMeasurement', 'status', 'created_on', 'edited_on']
+        fields = ['id', 'timestamp', 'tree', 'strengthMeasurement', 'flavorMeasurement', 'acidMeasurement', 'sugarMeasurement', 'status', 'created_on', 'edited_on', 'status']

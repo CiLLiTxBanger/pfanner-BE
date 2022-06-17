@@ -49,19 +49,6 @@ class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
     serializer_class = TreeSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-    # def get_serializer_class(self):
-    #     if self.request.method == 'POST':
-    #         return WriteLabMeasurementSerializer
-    #     if self.request.method == 'GET' and (self.request.query_params.get('acidity_from') is not None 
-    #     or self.request.query_params.get('acidity_to') is not None
-    #     or self.request.query_params.get('flavor') is not None
-    #     or self.request.query_params.get('strength_from') is not None
-    #     or self.request.query_params.get('strength_to') is not None
-    #     or self.request.query_params.get('sugar_from') is not None
-    #     or self.request.query_params.get('sugar_to') is not None):
-    #         return TreeSerializer
-    #     return LabMeasurementSerializer
-
     def get_queryset(self):
         queryset = LabMeasurement.objects.all()
         acidity_from = self.request.query_params.get('acidity_from')

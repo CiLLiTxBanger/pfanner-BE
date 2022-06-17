@@ -1,3 +1,4 @@
+import imp
 from .TreeSerializer import TreeSerializer, WriteTreeSerializer
 from .LocationSerializer import LocationSerializer
 from .ImageSerializer import ImageSerializer
@@ -9,7 +10,7 @@ from .FlavorMeasurementSerializer import FlavorMeasurementSerializer
 from .FrostSensivitySerializer import FrostSensitivitySerializer
 from .GrowthHabitSerializer import GrowthHabitSerializer
 from .LabMeasurementSerializer import LabMeasurementSerializer, WriteLabMeasurementSerializer
-from .OrchardMeasurementSerializer import OrchardMeasurementSerializer
+from .OrchardMeasurementSerializer import OrchardMeasurementSerializer, WriteOrchardMeasurementSerializer
 from .PrecipitationSerializer import PrecipitationSerializer
 from .SeasonSerializer import SeasonSerializer
 from .StrengthMeasurementSerializer import StrengthMeasurementSerializer
@@ -17,3 +18,4 @@ from .SugarMeasurementSerializer import SugarMeasurementSerializer
 from .TemperatureSerializer import TemperatureSerializer
 from .YieldHabitSerializer import YieldHabitSerializer
 from .UserSerializer import UserSerializer
+from .TreeAnalyticsSerializer import TreeAnalyticsSerializer

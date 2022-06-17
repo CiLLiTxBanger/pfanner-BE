@@ -1,16 +1,15 @@
 from rest_framework import serializers
-from api.models import OrchardMeasurement, Image
+from api.models import OrchardMeasurement
 from api.serializers import *
 
 class OrchardMeasurementSerializer(serializers.ModelSerializer):
-    #image = ImageSerializer()
+    tree = TreeSerializer()
+
     class Meta:
         model = OrchardMeasurement
-        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'season', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on']
+        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'season', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on', 'status']
 
-    #def create(self, validated_data):
-        #image_data = validated_data.pop('image')
-        #image = Image.objects.create(**image_data)
-        #orchardMeasurement = OrchardMeasurement.objects.create(image=image, **validated_data)
-
-        #return orchardMeasurement
+class WriteOrchardMeasurementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrchardMeasurement
+        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'season', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on', 'status']
