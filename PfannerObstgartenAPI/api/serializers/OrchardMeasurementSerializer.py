@@ -6,7 +6,7 @@ class OrchardMeasurementSerializer(serializers.ModelSerializer):
     #image = ImageSerializer()
     class Meta:
         model = OrchardMeasurement
-        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'season', 'temperature', 'lateFrost', 'created_on', 'edited_on']
+        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'season', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on']
 
     #def create(self, validated_data):
         #image_data = validated_data.pop('image')

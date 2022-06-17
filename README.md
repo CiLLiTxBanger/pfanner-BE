@@ -33,9 +33,9 @@ py manage.py runserver
 python manage.py makemigrations
 python manage.py migrate
 ```
-###To load Fixtures
+###To load Fixtures - new
 ```
-py manage.py loaddata AcidMeasurement.json Disease.json FlavorMeasurement.json FrostSensitivity.json GrowthHabit.json Location.json Precipitation.json Season.json StrengthMeasurement.json SugarMeasurement.json Temperature.json Variety.json YieldHabit.json Tree.json OrchardMeasurement.json DiseaseMeasurement.json LabMeasurement.json Image.json
+py manage.py loaddata Disease.json Location.json Variety.json Tree.json OrchardMeasurement.json DiseaseMeasurement.json LabMeasurement.json Image.json
 ```
 db: pfannerobstgartendb
 user: pfanner

@@ -5,10 +5,11 @@
     "fields": {
       "timestamp": "2001-04-04",
       "tree": "1",
-      "strengthMeasurement": "1",
-      "flavorMeasurement": "1",
-      "acidMeasurement": "2",
-      "sugarMeasurement": "5",
+      "strengthMeasurement": "0.5",
+      "flavorMeasurement": "A",
+      "acidMeasurement": "0.5",
+      "sugarMeasurement": "0.4",
+      "status": "0",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }
@@ -18,11 +19,12 @@
     "pk": 2,
     "fields": {
       "timestamp": "2001-04-04",
-      "tree": "1",
-      "strengthMeasurement": "6",
-      "flavorMeasurement": "2",
-      "acidMeasurement": "2",
-      "sugarMeasurement": "1",
+      "tree": "2",
+      "strengthMeasurement": "7.6",
+      "flavorMeasurement": "B",
+      "acidMeasurement": "0.35",
+      "sugarMeasurement": "11.4",
+      "status": "0",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }
@@ -33,10 +35,11 @@
     "fields": {
       "timestamp": "2001-04-04",
       "tree": "1",
-      "strengthMeasurement": "2",
-      "flavorMeasurement": "3",
-      "acidMeasurement": "3",
-      "sugarMeasurement": "4",
+      "strengthMeasurement": "5.4",
+      "flavorMeasurement": "C",
+      "acidMeasurement": "0.55",
+      "sugarMeasurement": "4.5",
+      "status": "1",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }
@@ -46,11 +49,12 @@
     "pk": 4,
     "fields": {
       "timestamp": "2001-04-04",
-      "tree": "1",
-      "strengthMeasurement": "3",
-      "flavorMeasurement": "2",
-      "acidMeasurement": "4",
-      "sugarMeasurement": "3",
+      "tree": "3",
+      "strengthMeasurement": "2.8",
+      "flavorMeasurement": "A",
+      "acidMeasurement": "0.89",
+      "sugarMeasurement": "15.8",
+      "status": "1",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }
@@ -61,10 +65,11 @@
     "fields": {
       "timestamp": "2001-04-04",
       "tree": "1",
-      "strengthMeasurement": "4",
-      "flavorMeasurement": "1",
-      "acidMeasurement": "5",
-      "sugarMeasurement": "2",
+      "strengthMeasurement": "7.9",
+      "flavorMeasurement": "A",
+      "acidMeasurement": "6.9",
+      "sugarMeasurement": "6.9",
+      "status": "1",
       "created_on": "2000-05-05",
       "edited_on": "2000-05-05"
     }

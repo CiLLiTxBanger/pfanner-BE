@@ -3,8 +3,22 @@ import os
 
 class OrchardMeasurement(models.Model):
 
-    #Not sure if needed
-    #timestamp = models.DateTimeField(default=datetime.now)
+    PROBABILITY_CHOICES = [
+            ("Viel", "Viel"),
+            ("Mittel", "Mittel"),
+            ("Wenig", "Wenig"),
+    ]
+    SEASON_CHOICES = [
+                ("Frühling", "Frühling"),
+                ("Sommer", "Sommer"),
+                ("Herbst", "Herbst"),
+                ("Winter", "Winter"),
+    ]
+    PRECIPITATION_CHOICES = [
+                ("Trocken", "Trocken"),
+                ("Normal", "Normal"),
+                ("Feucht", "Feucht"),
+        ]
 
     description = models.TextField()
     tree = models.ForeignKey(
@@ -21,12 +35,14 @@ class OrchardMeasurement(models.Model):
                     blank=True,
                     null=True
     )
-    frostSensitivity = models.ForeignKey('FrostSensitivity', on_delete=models.DO_NOTHING)
-    growthHabit = models.ForeignKey('GrowthHabit', on_delete=models.DO_NOTHING)
-    yieldHabit = models.ForeignKey('YieldHabit', on_delete=models.DO_NOTHING)
-    season = models.ForeignKey('Season', on_delete=models.DO_NOTHING)
-    temperature = models.ForeignKey( 'Temperature', on_delete=models.DO_NOTHING)
+    frostSensitivity = models.CharField(max_length=30, choices = PROBABILITY_CHOICES, blank=True, null=True)
+    growthHabit = models.CharField(max_length=30, choices = PROBABILITY_CHOICES, blank=True, null=True)
+    yieldHabit = models.CharField(max_length=30, choices = PROBABILITY_CHOICES, blank=True, null=True)
+    season = models.CharField(max_length=30, choices = SEASON_CHOICES, blank=True, null=True)
+    temperature = models.CharField(max_length=30, choices = PROBABILITY_CHOICES, blank=True, null=True)
+    precipitation = models.CharField(max_length=30, choices = PRECIPITATION_CHOICES, blank=True, null=True)
     lateFrost = models.BooleanField(default=False)
+    status = models.BooleanField(default=False)
 
     created_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
