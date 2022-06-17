@@ -1,5 +1,5 @@
-from api.serializers import LabMeasurementSerializer
-from api.models import LabMeasurement
+from api.serializers import LabMeasurementSerializer, WriteLabMeasurementSerializer, TreeSerializer
+from api.models import LabMeasurement, Tree
 from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
@@ -29,7 +29,79 @@ class LabMeasurementList(generics.ListCreateAPIView):
     serializer_class = LabMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return WriteLabMeasurementSerializer
+        return LabMeasurementSerializer
+
 class LabMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = LabMeasurement.objects.all()
     serializer_class = LabMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
+    queryset = LabMeasurement.objects.all()
+    serializer_class = TreeSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    # def get_serializer_class(self):
+    #     if self.request.method == 'POST':
+    #         return WriteLabMeasurementSerializer
+    #     if self.request.method == 'GET' and (self.request.query_params.get('acidity_from') is not None 
+    #     or self.request.query_params.get('acidity_to') is not None
+    #     or self.request.query_params.get('flavor') is not None
+    #     or self.request.query_params.get('strength_from') is not None
+    #     or self.request.query_params.get('strength_to') is not None
+    #     or self.request.query_params.get('sugar_from') is not None
+    #     or self.request.query_params.get('sugar_to') is not None):
+    #         return TreeSerializer
+    #     return LabMeasurementSerializer
+
+    def get_queryset(self):
+        queryset = LabMeasurement.objects.all()
+        acidity_from = self.request.query_params.get('acidity_from')
+        acidity_to = self.request.query_params.get('acidity_to')
+        flavor = self.request.query_params.get('flavor')
+        strength_from = self.request.query_params.get('strength_from')
+        strength_to = self.request.query_params.get('strength_to')
+        sugar_from = self.request.query_params.get('sugar_from')
+        sugar_to = self.request.query_params.get('sugar_to')
+        filteredIds = []
+        filtersApplied = False
+
+        if acidity_from is not None:
+            filtersApplied = True
+            queryset = queryset.filter(acidMeasurement__gte=acidity_from)
+
+        if acidity_to is not None:
+            filtersApplied = True
+            queryset = queryset.filter(acidMeasurement__lte=acidity_to)
+
+        if strength_from is not None:
+            filtersApplied = True
+            queryset = queryset.filter(strengthMeasurement__gte=strength_from)
+
+        if strength_to is not None:
+            filtersApplied = True
+            queryset = queryset.filter(strengthMeasurement__lte=strength_to)
+
+        if sugar_from is not None:
+            filtersApplied = True
+            queryset = queryset.filter(sugarMeasurement__gte=sugar_from)
+
+        if sugar_to is not None:
+            filtersApplied = True
+            queryset = queryset.filter(sugarMeasurement__lte=sugar_to)
+
+        if flavor is not None:
+            filtersApplied = True
+            queryset = queryset.filter(flavorMeasurement=flavor)
+
+        if filtersApplied:
+            filteredIds.append(queryset.values_list('tree_id', flat=True))
+            queryset = Tree.objects.all()
+            queryset = queryset.filter(pk__in=filteredIds)
+        else:
+            queryset = Tree.objects.all()
+
+        return queryset
