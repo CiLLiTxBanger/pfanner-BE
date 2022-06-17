@@ -19,12 +19,12 @@ class OrchardMeasurement(models.Model):
                 ("dry", "dry"),
                 ("normal", "normal"),
                 ("wet", "wet"),
-        ]
+    ]
     TEMPERATURE_CHOICES = [
                 ("cold", "cold"),
                 ("medium", "medium"),
                 ("warm", "warm"),
-        ]
+    ]
 
     description = models.TextField()
     tree = models.ForeignKey(
