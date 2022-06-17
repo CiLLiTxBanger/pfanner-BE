@@ -39,6 +39,11 @@ class LabMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = LabMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_serializer_class(self):
+        if self.request.method == 'PUT':
+            return WriteLabMeasurementSerializer
+        return LabMeasurementSerializer
+
 class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
     queryset = LabMeasurement.objects.all()
     serializer_class = TreeSerializer
