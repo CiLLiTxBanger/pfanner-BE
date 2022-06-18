@@ -31,7 +31,7 @@ class OrchardMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_serializer_class(self):
-        if self.request.method == 'PUT':
+        if self.request.method == 'PUT' or self.request.method == 'PATCH':
             return WriteOrchardMeasurementSerializer
         return OrchardMeasurementSerializer
 

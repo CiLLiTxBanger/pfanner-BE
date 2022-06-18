@@ -42,6 +42,11 @@ class TreeDetail(generics.RetrieveUpdateAPIView):
     queryset = Tree.objects.all()
     serializer_class = TreeSerializer
 
+    def get_serializer_class(self):
+        if self.request.method == 'PATCH' or self.request.method == 'PUT':
+            return WriteTreeSerializer
+        return TreeSerializer
+
 class TreeAnalytics(APIView):
     """
     Retrieve a variety instance by tree id in url.
