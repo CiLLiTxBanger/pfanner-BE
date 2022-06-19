@@ -26,7 +26,7 @@ class OrchardMeasurement(models.Model):
                 ("warm", "warm"),
     ]
 
-    description = models.TextField()
+    description = models.TextField(blank=True, null=True)
     tree = models.ForeignKey(
                     'Tree',
                     on_delete=models.CASCADE
