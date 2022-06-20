@@ -1,57 +1,112 @@
 [
+    {
+      "model": "api.DiseaseMeasurement",
+      "pk": 1,
+      "fields": {
+        "value": "Gering",
+        "orchardMeasurement": "1",
+        "disease": "3",
+        "created_on": "2019-05-08",
+        "edited_on": "2020-07-02"
+      }
+    }, 
+    {
+      "model": "api.DiseaseMeasurement",
+      "pk": 2,
+      "fields": {
+        "value": "Mittel",
+        "orchardMeasurement": "2",
+        "disease": "2",
+        "created_on": "2021-04-06",
+        "edited_on": "2022-08-02"
+      }
+    }, 
+    {
+      "model": "api.DiseaseMeasurement",
+      "pk": 3,
+      "fields": {
+        "value": "Hoch",
+        "orchardMeasurement": "3",
+        "disease": "1",
+        "created_on": "2021-03-07",
+        "edited_on": "2022-02-01"
+      }
+    }, 
+    {
+      "model": "api.DiseaseMeasurement",
+      "pk": 4,
+      "fields": {
+        "value": "Gering",
+        "orchardMeasurement": "4",
+        "disease": "4",
+        "created_on": "2019-03-09",
+        "edited_on": "2020-04-01"
+      }
+    }, 
+    {
+      "model": "api.DiseaseMeasurement",
+      "pk": 5,
+      "fields": {
+        "value": "Hoch",
+        "orchardMeasurement": "5",
+        "disease": "5",
+        "created_on": "2018-09-02",
+        "edited_on": "2020-05-09"
+      }
+    },
   {
-    "model": "api.DiseaseMeasurement",
-    "pk": 1,
-    "fields": {
-      "value": "Gering",
-      "orchardMeasurement": "1",
-      "disease": "3",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
-    }
-  }, 
+      "model": "api.DiseaseMeasurement",
+      "pk": 6,
+      "fields": {
+        "value": "Gering",
+        "orchardMeasurement": "6",
+        "disease": "2",
+        "created_on": "2019-03-06",
+        "edited_on": "2021-07-03"
+      }
+    },
   {
-    "model": "api.DiseaseMeasurement",
-    "pk": 2,
-    "fields": {
-      "value": "Mittel",
-      "orchardMeasurement": "2",
-      "disease": "2",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
-    }
-  }, 
+      "model": "api.DiseaseMeasurement",
+      "pk": 7,
+      "fields": {
+        "value": "Mittel",
+        "orchardMeasurement": "7",
+        "disease": "5",
+        "created_on": "2021-04-06",
+        "edited_on": "2022-08-02"
+      }
+    },
   {
-    "model": "api.DiseaseMeasurement",
-    "pk": 3,
-    "fields": {
-      "value": "Hoch",
-      "orchardMeasurement": "3",
-      "disease": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
-    }
-  }, 
+      "model": "api.DiseaseMeasurement",
+      "pk": 8,
+      "fields": {
+        "value": "Hoch",
+        "orchardMeasurement": "8",
+        "disease": "6",
+        "created_on": "2019-05-02",
+        "edited_on": "2022-08-01"
+      }
+    },
   {
-    "model": "api.DiseaseMeasurement",
-    "pk": 4,
-    "fields": {
-      "value": "Gering",
-      "orchardMeasurement": "4",
-      "disease": "4",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
-    }
-  }, 
+      "model": "api.DiseaseMeasurement",
+      "pk": 9,
+      "fields": {
+        "value": "Gering",
+        "orchardMeasurement": "9",
+        "disease": "5",
+        "created_on": "2020-04-08",
+        "edited_on": "2022-09-01"
+      }
+    },
   {
-    "model": "api.DiseaseMeasurement",
-    "pk": 5,
-    "fields": {
-      "value": "Hoch",
-      "orchardMeasurement": "5",
-      "disease": "5",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "model": "api.DiseaseMeasurement",
+      "pk": 10,
+      "fields": {
+        "value": "Mittel",
+        "orchardMeasurement": "5",
+        "disease": "5",
+        "created_on": "2022-01-05",
+        "edited_on": "2022-06-02"
+      }
     }
-  }
-]
+  ]
