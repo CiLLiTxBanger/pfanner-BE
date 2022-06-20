@@ -40,10 +40,10 @@ class ExportOrchardMeasurementsCSVByTreeId(APIView):
 
         #Headlines
         writer.writerow(['sep=,'])
-        writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Season', 'Temperature', 'Precipitation', 'Late Frost', 'Status', 'Created on'])
+        writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Temperature', 'Precipitation', 'Late Frost', 'Status', 'Created on'])
 
         #Rows
         for oM in orchardMeasurements:
-            writer.writerow([oM.tree, oM.tree__variety__name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.season, oM.temperature, oM.precipitation, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
+            writer.writerow([oM.tree, oM.tree__variety__name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.temperature, oM.precipitation, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
 
         return response
