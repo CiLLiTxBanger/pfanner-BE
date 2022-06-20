@@ -21,11 +21,11 @@ class ExportLabMeasurementsCSVByTreeId(APIView):
 
         #Headlines
         writer.writerow(['sep=,'])
-        writer.writerow(['Strength Measurement', 'Flavor Measurement', 'Acid Measurement', 'Sugar Measurement', 'Status', 'Last Modified', 'Created on'])
+        writer.writerow(['Tree ID', 'Variety Name', 'Strength Measurement', 'Flavor Measurement', 'Acid Measurement', 'Sugar Measurement', 'Status', 'Last Modified', 'Created on'])
 
         #Rows
         for lM in labMeasurements:
-            writer.writerow([' '+str(lM.strengthMeasurement), lM.flavorMeasurement, ' '+str(lM.acidMeasurement), ' '+str(lM.sugarMeasurement), lM.status, lM.timestamp.strftime("%d.%m.%Y - %H:%M"), lM.created_on.strftime("%d.%m.%Y - %H:%M")])
+            writer.writerow([lM.tree.id, lM.tree.variety.name, ' '+str(lM.strengthMeasurement), lM.flavorMeasurement, ' '+str(lM.acidMeasurement), ' '+str(lM.sugarMeasurement), lM.status, lM.timestamp.strftime("%d.%m.%Y - %H:%M"), lM.created_on.strftime("%d.%m.%Y - %H:%M")])
 
         return response
 
@@ -44,6 +44,42 @@ class ExportOrchardMeasurementsCSVByTreeId(APIView):
 
         #Rows
         for oM in orchardMeasurements:
-            writer.writerow([oM.tree, oM.tree__variety__name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.temperature, oM.precipitation, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
+            writer.writerow([oM.tree.id, oM.tree.variety.name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.temperature, oM.precipitation, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
+
+        return response
+
+class ExportLabMeasurementsCSV(APIView):
+    def get(self, request, *args, **kwargs):
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="LabMeasurements.csv"'
+
+        writer = csv.writer(response)
+        labMeasurements = LabMeasurement.objects.all()
+
+        #Headlines
+        writer.writerow(['sep=,'])
+        writer.writerow(['Tree ID', 'Variety Name', 'Strength Measurement', 'Flavor Measurement', 'Acid Measurement', 'Sugar Measurement', 'Status', 'Last Modified', 'Created on'])
+
+        #Rows
+        for lM in labMeasurements:
+            writer.writerow([lM.tree.id, lM.tree.variety.name, ' '+str(lM.strengthMeasurement), lM.flavorMeasurement, ' '+str(lM.acidMeasurement), ' '+str(lM.sugarMeasurement), lM.status, lM.timestamp.strftime("%d.%m.%Y - %H:%M"), lM.created_on.strftime("%d.%m.%Y - %H:%M")])
+
+        return response
+
+class ExportOrchardMeasurementsCSV(APIView):
+    def get(self, request, *args, **kwargs):
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="OrchardMeasurements.csv"'
+
+        writer = csv.writer(response)
+        orchardMeasurements = OrchardMeasurement.objects.all()
+
+        #Headlines
+        writer.writerow(['sep=,'])
+        writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Temperature', 'Precipitation', 'Late Frost', 'Status', 'Created on'])
+
+        #Rows
+        for oM in orchardMeasurements:
+            writer.writerow([oM.tree.id, oM.tree.variety.name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.temperature, oM.precipitation, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
 
         return response
