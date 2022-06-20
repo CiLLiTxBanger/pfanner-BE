@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions
 from rest_framework import status
+from rest_framework import filters
 
 class OrchardMeasurementListByTreeId(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -39,6 +40,9 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
     queryset = OrchardMeasurement.objects.all()
     serializer_class = TreeSerializer
     permission_classes = [permissions.IsAuthenticated]
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['type', 'variety__name', 'variety__blossom', 'variety__fruit', 'variety__climate', 'variety__pick_maturity',
+     'variety__usage', 'variety__pollinator', 'variety__properties', 'variety__output', 'variety__disease_possibility', 'variety__description']
 
     def get_queryset(self):
         queryset = OrchardMeasurement.objects.all()
@@ -47,7 +51,10 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
         yieldHabit = self.request.query_params.get('yieldHabit')
         precipitation = self.request.query_params.get('precipitation')
         temperature = self.request.query_params.get('temperature')
-        season = self.request.query_params.get('season')
+        row = self.request.query_params.get('row')
+        column = self.request.query_params.get('column')
+        treeid = self.request.query_params.get('treeid')
+        #season = self.request.query_params.get('season')
         lateFrost = self.request.query_params.get('lateFrost')
         filteredIds = []
         filtersApplied = False
@@ -72,9 +79,21 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
             filtersApplied = True
             queryset = queryset.filter(temperature=temperature)
 
-        if season is not None:
+        if row is not None:
             filtersApplied = True
-            queryset = queryset.filter(season=season)
+            queryset = queryset.filter(tree__row=row)
+
+        if column is not None:
+            filtersApplied = True
+            queryset = queryset.filter(tree__column=column)
+
+        if treeid is not None:
+            filtersApplied = True
+            queryset = queryset.filter(tree__id=treeid)
+
+        # if season is not None:
+        #     filtersApplied = True
+        #     queryset = queryset.filter(season=season)
 
         if lateFrost is not None:
             filtersApplied = True

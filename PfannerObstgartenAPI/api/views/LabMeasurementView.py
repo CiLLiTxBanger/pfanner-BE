@@ -5,6 +5,7 @@ from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions
+from rest_framework import filters
 
 class LabMeasurementListByTreeId(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -48,6 +49,9 @@ class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
     queryset = LabMeasurement.objects.all()
     serializer_class = TreeSerializer
     permission_classes = [permissions.IsAuthenticated]
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['type', 'variety__name', 'variety__blossom', 'variety__fruit', 'variety__climate', 'variety__pick_maturity',
+     'variety__usage', 'variety__pollinator', 'variety__properties', 'variety__output', 'variety__disease_possibility', 'variety__description']
 
     def get_queryset(self):
         queryset = LabMeasurement.objects.all()
@@ -58,6 +62,9 @@ class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
         strength_to = self.request.query_params.get('strength_to')
         sugar_from = self.request.query_params.get('sugar_from')
         sugar_to = self.request.query_params.get('sugar_to')
+        row = self.request.query_params.get('row')
+        column = self.request.query_params.get('column')
+        treeid = self.request.query_params.get('treeid')
         filteredIds = []
         filtersApplied = False
 
@@ -88,6 +95,18 @@ class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
         if flavor is not None:
             filtersApplied = True
             queryset = queryset.filter(flavorMeasurement=flavor)
+
+        if row is not None:
+            filtersApplied = True
+            queryset = queryset.filter(tree__row=row)
+
+        if column is not None:
+            filtersApplied = True
+            queryset = queryset.filter(tree__column=column)
+
+        if treeid is not None:
+            filtersApplied = True
+            queryset = queryset.filter(tree__id=treeid)
 
         if filtersApplied:
             filteredIds.append(queryset.values_list('tree_id', flat=True))

@@ -1,4 +1,8 @@
 from gc import get_objects
+import http
+from http.client import NETWORK_AUTHENTICATION_REQUIRED
+from os import stat
+from telnetlib import STATUS
 from api.models import Tree, OrchardMeasurement, LabMeasurement
 from api.serializers import TreeSerializer, WriteTreeSerializer, WriteOrchardMeasurementSerializer, WriteLabMeasurementSerializer
 from rest_framework import generics
@@ -10,6 +14,8 @@ from rest_framework import filters
 from rest_framework.views import APIView
 from datetime import datetime
 from rest_framework import status
+from django.http import *
+from rest_framework.exceptions import APIException
 
 
 class TreeList(generics.ListCreateAPIView):
@@ -26,13 +32,24 @@ class TreeList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         queryset = Tree.objects.filter(column=self.request.data['column'], row=self.request.data['row'], location=self.request.data['location'], active = 1)
         if queryset.exists():
-            raise ValidationError('Position is already in use')
-        serializer.save()
+            raise NotAllParametersAvailable()
+        else:
+            serializer.save()
         
     def get_serializer_class(self):
         if self.request.method == 'POST':
             return WriteTreeSerializer
         return TreeSerializer
+
+class NotAllParametersAvailable(APIException):
+    status_code = 418
+    default_detail = 'Not all required parameters passed. The following parameters have to be passed: row, column and location.'
+    default_code = 'i_am_a_Teapot'
+
+class PositionAlreadyInUse(APIException):
+    status_code = 418
+    default_detail = 'There is already a active tree on this position'
+    default_code = 'i_am_a_Teapot'
 
 class TreeDetail(generics.RetrieveUpdateAPIView):
     """
@@ -46,6 +63,21 @@ class TreeDetail(generics.RetrieveUpdateAPIView):
         if self.request.method == 'PATCH' or self.request.method == 'PUT':
             return WriteTreeSerializer
         return TreeSerializer
+
+    def perform_update(self, serializer):
+        if "active" in self.request.data:
+            if self.request.data['active'] == 0:
+                return super().perform_update(serializer)
+        if 'column' in self.request.data and 'row' in self.request.data and 'location' in self.request.data:
+            column = self.request.data['column']
+            row = self.request.data['row']
+            location = self.request.data['location']
+            if column is not None and row is not None and location is not None:
+                queryset = Tree.objects.filter(column=column, row=row, location=location, active = 1)
+                if queryset.exists():
+                    raise PositionAlreadyInUse()
+                return super().perform_update(serializer)
+        raise NotAllParametersAvailable()
 
 class TreeAnalytics(APIView):
     """
