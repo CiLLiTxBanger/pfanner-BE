@@ -7,9 +7,9 @@ class OrchardMeasurementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrchardMeasurement
-        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'season', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on', 'status']
+        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on', 'status']
 
 class WriteOrchardMeasurementSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrchardMeasurement
-        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'season', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on', 'status']
+        fields = ['id', 'description', 'tree', 'image_photo', 'image_description', 'frostSensitivity', 'growthHabit', 'yieldHabit', 'temperature', 'precipitation', 'lateFrost', 'status', 'created_on', 'edited_on', 'status']
