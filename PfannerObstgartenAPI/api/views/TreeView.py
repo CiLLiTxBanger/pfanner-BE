@@ -75,6 +75,9 @@ class TreeDetail(generics.RetrieveUpdateAPIView):
             if column is not None and row is not None and location is not None:
                 queryset = Tree.objects.filter(column=column, row=row, location=location, active = 1)
                 if queryset.exists():
+                    queryset = queryset.filter(pk=self.kwargs['pk'])
+                    if queryset.exists():
+                        return super().perform_update(serializer)                       
                     raise PositionAlreadyInUse()
                 return super().perform_update(serializer)
         raise NotAllParametersAvailable()
