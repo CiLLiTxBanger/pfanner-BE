@@ -41,6 +41,12 @@ class DiseaseMeasurementList(generics.ListCreateAPIView):
             return WriteDiseaseMeasurementSerializer
         return DiseaseMeasurementSerializer
 
+    def get_serializer(self, *args, **kwargs):
+        """ if an array is passed, set serializer to many """
+        if isinstance(kwargs.get('data', {}), list):
+            kwargs['many'] = True
+        return super(DiseaseMeasurementList, self).get_serializer(*args, **kwargs)
+
 class DiseaseMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Retrieve or update a Disease.

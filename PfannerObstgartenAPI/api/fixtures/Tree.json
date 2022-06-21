@@ -63,7 +63,7 @@
     "model": "api.Tree",
     "pk": 4,
     "fields": {
-      "type": Ananasrenette
+      "type": "Ananasrenette",
       "variety": "7",
       "row": "5",
       "column": "15",
@@ -83,7 +83,7 @@
     "model": "api.Tree",
     "pk": 5,
     "fields": {
-      "type": "Berner Rosen"
+      "type": "Berner Rosen",
       "variety": "3",
       "row": "7",
       "column": "19",

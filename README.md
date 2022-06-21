@@ -35,7 +35,7 @@ python manage.py migrate
 ```
 ###To load Fixtures - new
 ```
-py manage.py loaddata Disease.json Location.json Variety.json Tree.json OrchardMeasurement.json DiseaseMeasurement.json LabMeasurement.json Image.json
+py manage.py loaddata Disease.json Location.json Variety.json Tree.json OrchardMeasurement.json DiseaseMeasurement.json LabMeasurement.json
 ```
 db: pfannerobstgartendb
 user: pfanner
