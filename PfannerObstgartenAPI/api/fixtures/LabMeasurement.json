@@ -9,7 +9,7 @@
       "flavorMeasurement": "A",
       "acidMeasurement": "0.5",
       "sugarMeasurement": "0.4",
-      "status": "0",
+      "status": "1",
       "created_on": "2021-06-05",
       "edited_on": "2022-06-09"
     }
@@ -24,7 +24,7 @@
       "flavorMeasurement": "B",
       "acidMeasurement": "0.35",
       "sugarMeasurement": "11.4",
-      "status": "0",
+      "status": "1",
       "created_on": "2018-03-06",
       "edited_on": "2020-08-06"
     }
