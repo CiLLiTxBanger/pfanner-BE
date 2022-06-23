@@ -54,7 +54,11 @@ class ExportLabMeasurementsCSV(APIView):
         response['Content-Disposition'] = 'attachment; filename="LabMeasurements.csv"'
 
         writer = csv.writer(response)
+        location = self.request.query_params.get('location')
         labMeasurements = LabMeasurement.objects.all()
+
+        if location is not None:
+            labMeasurements = labMeasurements.filter(tree__location=location)
 
         #Headlines
         writer.writerow(['sep=,'])
@@ -72,7 +76,11 @@ class ExportOrchardMeasurementsCSV(APIView):
         response['Content-Disposition'] = 'attachment; filename="OrchardMeasurements.csv"'
 
         writer = csv.writer(response)
+        location = self.request.query_params.get('location')
         orchardMeasurements = OrchardMeasurement.objects.all()
+
+        if location is not None:
+            orchardMeasurements = orchardMeasurements.filter(tree__location=location)
 
         #Headlines
         writer.writerow(['sep=,'])

@@ -54,8 +54,8 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
         row = self.request.query_params.get('row')
         column = self.request.query_params.get('column')
         treeid = self.request.query_params.get('treeid')
-        #season = self.request.query_params.get('season')
         lateFrost = self.request.query_params.get('lateFrost')
+        location = self.request.query_params.get('location')
         filteredIds = []
         filtersApplied = False
 
@@ -91,10 +91,6 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
             filtersApplied = True
             queryset = queryset.filter(tree__id=treeid)
 
-        # if season is not None:
-        #     filtersApplied = True
-        #     queryset = queryset.filter(season=season)
-
         if lateFrost is not None:
             filtersApplied = True
             queryset = queryset.filter(lateFrost=lateFrost)
@@ -106,4 +102,6 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
         else:
             queryset = Tree.objects.all()
 
+        if location is not None:
+            queryset = queryset.filter(location=location)
         return queryset

@@ -65,6 +65,7 @@ class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
         row = self.request.query_params.get('row')
         column = self.request.query_params.get('column')
         treeid = self.request.query_params.get('treeid')
+        location = self.request.query_params.get('location')
         filteredIds = []
         filtersApplied = False
 
@@ -115,4 +116,6 @@ class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
         else:
             queryset = Tree.objects.all()
 
+        if location is not None:
+            queryset = queryset.filter(location=location)
         return queryset
