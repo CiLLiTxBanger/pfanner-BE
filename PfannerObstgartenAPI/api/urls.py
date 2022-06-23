@@ -31,7 +31,7 @@ urlpatterns = [
      path('api/orchardmeasurements/csv', views.CsvView.ExportOrchardMeasurementsCSV.as_view(), name='orchardmeasurements-csv'),
      path('api/trees/csv', views.CsvView.ExportTreesCSV.as_view(), name='trees-csv'),
      path('api/trees/filterbylabmeasurementstats/', views.LabMeasurementView.TreesFilteredByLabMeasurementStats.as_view(), name='treesfilteredbylabmeasurementstats-list'),
-     path('api/trees/<int:pk>/analytics', views.TreeView.TreeAnalytics.as_view(), name='tree-analytics'),
+     path('api/trees/<int:pk>/analytics/', views.TreeView.TreeAnalytics.as_view(), name='tree-analytics'),
      path('api/trees/filterbyorchardmeasurementstats/', views.OrchardMeasurementView.TreesFilteredByOrchardMeasurementStats.as_view(), name='treesfilteredbyorchardmeasurementstats-list'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

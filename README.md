@@ -53,3 +53,6 @@ Setup auf Server:
 
 ZUM INSTALLIEREN VON MYSQLCLIENT
 sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+
+
+Als File Sharing vom Cloud Server kann evtl auch: https://github.com/dutchcoders/transfer.sh/ verwendet werden.
