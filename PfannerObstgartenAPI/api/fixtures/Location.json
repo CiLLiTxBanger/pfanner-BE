@@ -1,7 +1,7 @@
 [
   {
     "model": "api.Location",
-    "pk": 1,
+    "pk": 0,
     "fields": {
       "city": "Enns",
       "country": "Austria",
@@ -12,18 +12,7 @@
   },
   {
     "model": "api.Location",
-    "pk": 2,
-    "fields": {
-      "city": "Wien",
-      "country": "Austria",
-      "description": "Wien",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
-    }
-  },
-  {
-    "model": "api.Location",
-    "pk": 3,
+    "pk": 1,
     "fields": {
       "city": "Bar",
       "country": "Ukraine",
