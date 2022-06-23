@@ -47,6 +47,14 @@ class DiseaseMeasurementList(generics.ListCreateAPIView):
             kwargs['many'] = True
         return super(DiseaseMeasurementList, self).get_serializer(*args, **kwargs)
 
+    def perform_create(self, serializer):
+        #self.request.data['orchardMeasurement'] funkt nicht
+        # queryset = DiseaseMeasurement.objects.filter(orchardMeasurement=serializer.data['orchardMeasurement'])
+        # if queryset.exists():
+        #     queryset.delete()
+
+        serializer.save()
+
 class DiseaseMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Retrieve or update a Disease.
