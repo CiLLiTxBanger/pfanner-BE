@@ -9,13 +9,13 @@ from rest_framework import generics
 from rest_framework import permissions
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.core.exceptions import ValidationError
 from rest_framework import filters
 from rest_framework.views import APIView
 from datetime import datetime
 from rest_framework import status
 from django.http import *
 from rest_framework.exceptions import APIException
+from django.db.models import Q
 
 
 class TreeList(generics.ListCreateAPIView):
@@ -105,16 +105,28 @@ class TreeAnalytics(APIView):
 
         year_from = self.request.query_params.get('year_from')
         year_to = self.request.query_params.get('year_to')
+        month_from = self.request.query_params.get('month_from')
+        month_to = self.request.query_params.get('month_to')
 
         if year_from is not None:
             day_year_from = datetime(int(year_from), 1, 1)
             orchardmeasurements = orchardmeasurements.filter(created_on__year__gte=day_year_from.year, status=1)
             labmeasurements = labmeasurements.filter(timestamp__year__gte=day_year_from.year, status=1)
+        
+        if month_from is not None and year_from is not None:
+            date = datetime(int(year_from), int(month_from), 1)
+            orchardmeasurements = orchardmeasurements.filter(Q(created_on__year=date.year, created_on__month__gte=date.month) | Q(created_on__year__gt=date.year), status=1)
+            labmeasurements = labmeasurements.filter(Q(timestamp__year=date.year, timestamp__month__gte=date.month) | Q(timestamp__year__gt=date.year), status=1)
 
         if year_to is not None:
             day_year_to = datetime(int(year_to), 1, 1)
             orchardmeasurements = orchardmeasurements.filter(created_on__year__lte=day_year_to.year, status=1)
             labmeasurements = labmeasurements.filter(timestamp__year__lte=day_year_to.year, status=1)
+        
+        if month_to is not None and year_to is not None:
+            date = datetime(int(year_to), int(month_to), 1)
+            orchardmeasurements = orchardmeasurements.filter(Q(created_on__year=date.year, created_on__month__lte=date.month) | Q(created_on__year__lt=date.year), status=1)
+            labmeasurements = labmeasurements.filter(Q(timestamp__year=date.year, timestamp__month__gte=date.month) | Q(timestamp__year__gt=date.year), status=1)
 
 
         orchardSerializer = WriteOrchardMeasurementSerializer(orchardmeasurements, many=True)
