@@ -1,7 +1,7 @@
 import re
 from webbrowser import get
 from rest_framework import permissions
-from api.models import Variety
+from api.models import Variety, Tree
 from api.serializers import VarietySerializer
 from rest_framework import generics
 from rest_framework import permissions
@@ -20,6 +20,25 @@ class VarietyList(generics.ListCreateAPIView):
     serializer_class = VarietySerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'blossom', 'fruit', 'climate', 'pick_maturity', 'usage', 'pollinator', 'properties', 'output', 'disease_possibility', 'description']
+
+    def get_queryset(self):
+        queryset = Tree.objects.all()
+        location = self.request.query_params.get('location')
+        filteredIds = []
+        filtersApplied = False
+
+        if location is not None:
+            filtersApplied = True
+            queryset = queryset.filter(location=location)
+            return queryset
+
+        if filtersApplied:
+            filteredIds.append(queryset.values_list('variety_id', flat=True))
+            queryset = Variety.objects.all()
+            queryset = queryset.filter(pk__in=filteredIds)
+        else:
+            queryset = Variety.objects.all()
+        return queryset
 
 class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     """

@@ -41,6 +41,15 @@ class TreeList(generics.ListCreateAPIView):
             return WriteTreeSerializer
         return TreeSerializer
 
+    def get_queryset(self):
+        queryset = Tree.objects.all()
+        location = self.request.query_params.get('location')
+
+        if location is not None:
+            queryset = queryset.filter(location=location)
+            return queryset
+        return queryset
+
 class NotAllParametersAvailable(APIException):
     status_code = 418
     default_detail = 'Not all required parameters passed. The following parameters have to be passed: row, column and location.'
