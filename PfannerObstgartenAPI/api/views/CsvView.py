@@ -99,7 +99,7 @@ class ExportTreesCSV(APIView):
             response = HttpResponse(content_type='text/csv', charset='utf-8')
             response['Content-Disposition'] = 'attachment; filename="Trees.csv"'
 
-            response.write(codecs.BOM_UTF8)
+            #response.write(codecs.BOM_UTF8)
 #             response.write(codecs.BOM_UTF16_LE)
 #             response.write(b'\xfe\xff\x00\x00\x00')
 #             response.write(u'\ufeff'.encode('utf8'))
