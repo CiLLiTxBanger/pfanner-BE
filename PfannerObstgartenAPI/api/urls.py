@@ -29,6 +29,7 @@ urlpatterns = [
      path('api/trees/<int:treeId>/orchardmeasurements/csv', views.CsvView.ExportOrchardMeasurementsCSVByTreeId.as_view(), name='orchardmeasurement-csv'),
      path('api/labmeasurements/csv', views.CsvView.ExportLabMeasurementsCSV.as_view(), name='labmeasurements-csv'),
      path('api/orchardmeasurements/csv', views.CsvView.ExportOrchardMeasurementsCSV.as_view(), name='orchardmeasurements-csv'),
+     path('api/trees/csv', views.CsvView.ExportTreesCSV.as_view(), name='trees-csv'),
      path('api/trees/filterbylabmeasurementstats/', views.LabMeasurementView.TreesFilteredByLabMeasurementStats.as_view(), name='treesfilteredbylabmeasurementstats-list'),
      path('api/trees/<int:pk>/analytics', views.TreeView.TreeAnalytics.as_view(), name='tree-analytics'),
      path('api/trees/filterbyorchardmeasurementstats/', views.OrchardMeasurementView.TreesFilteredByOrchardMeasurementStats.as_view(), name='treesfilteredbyorchardmeasurementstats-list'),

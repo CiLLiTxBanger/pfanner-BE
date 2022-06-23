@@ -3,7 +3,7 @@
     "model": "api.Tree",
     "pk": 1,
     "fields": {
-      "type": "Alkmene",
+      "type": "Apfel",
       "variety": "10",
       "row": "2",
       "column": "9",
@@ -14,7 +14,6 @@
       "longitude": "160.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2021-05-07",
       "edited_on": "2022-05-05"
     }
@@ -23,7 +22,7 @@
     "model": "api.Tree",
     "pk": 2,
     "fields": {
-      "type": "Dolores",
+      "type": "Apfel",
       "variety": "8",
       "row": "3",
       "column": "5",
@@ -34,7 +33,6 @@
       "longitude": "50.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2021-07-03",
       "edited_on": "2022-09-02"
     }
@@ -43,7 +41,7 @@
     "model": "api.Tree",
     "pk": 3,
     "fields": {
-      "type": "Tabor",
+      "type": "Apfel",
       "variety": "9",
       "row": "4",
       "column": "20",
@@ -54,7 +52,6 @@
       "longitude": "170.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2020-08-09",
       "edited_on": "2022-04-01"
     }
@@ -63,7 +60,7 @@
     "model": "api.Tree",
     "pk": 4,
     "fields": {
-      "type": "Ananasrenette",
+      "type": "Apfel",
       "variety": "7",
       "row": "5",
       "column": "15",
@@ -74,7 +71,6 @@
       "longitude": "100.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2022-01-02",
       "edited_on": "2022-06-09"
     }
@@ -83,7 +79,7 @@
     "model": "api.Tree",
     "pk": 5,
     "fields": {
-      "type": "Berner Rosen",
+      "type": "Apfel",
       "variety": "3",
       "row": "7",
       "column": "19",
@@ -94,7 +90,6 @@
       "longitude": "150.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2021-07-09",
       "edited_on": "2022-03-07"
     }
@@ -103,7 +98,7 @@
     "model": "api.Tree",
     "pk": 6,
     "fields": {
-      "type": "Berner Rosen",
+      "type": "Apfel",
       "variety": "3",
       "row": "8",
       "column": "19",
@@ -114,7 +109,6 @@
       "longitude": "-120.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2022-04-06",
       "edited_on": "2022-07-09"
     }
@@ -123,7 +117,7 @@
     "model": "api.Tree",
     "pk": 7,
     "fields": {
-      "type": "Goldlange",
+      "type": "Apfel",
       "variety": "2",
       "row": "10",
       "column": "11",
@@ -134,7 +128,6 @@
       "longitude": "110.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2021-07-09",
       "edited_on": "2022-01-04"
     }
@@ -143,7 +136,7 @@
     "model": "api.Tree",
     "pk": 8,
     "fields": {
-      "type": "Geflammter Cousinot",
+      "type": "Apfel",
       "variety": "1",
       "row": "5",
       "column": "10",
@@ -154,7 +147,6 @@
       "longitude": "-100.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2022-06-03",
       "edited_on": "2022-06-07"
     }
@@ -163,7 +155,7 @@
     "model": "api.Tree",
     "pk": 9,
     "fields": {
-      "type": "Maigold",
+      "type": "Apfel",
       "variety": "5",
       "row": "7",
       "column": "8",
@@ -174,7 +166,6 @@
       "longitude": "110.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2022-04-06",
       "edited_on": "2022-06-09"
     }
@@ -183,7 +174,7 @@
     "model": "api.Tree",
     "pk": 10,
     "fields": {
-      "type": "Renette",
+      "type": "Apfel",
       "variety": "6",
       "row": "2",
       "column": "3",
@@ -194,7 +185,6 @@
       "longitude": "100.000",
       "cut": "test",
       "active": "1",
-      "owner": "1",
       "created_on": "2022-03-08",
       "edited_on": "2022-06-01"
     }
