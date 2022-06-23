@@ -13,11 +13,9 @@ from rest_framework.reverse import reverse
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
-        'users': reverse('user-list', request=request, format=format),
         'trees': reverse('tree-list', request=request, format=format),
         'varieties': reverse('variety-list', request=request, format=format),
         'locations': reverse('location-list', request=request, format=format),
-        'images': reverse('image-list', request=request, format=format),
         'labmeasurements': reverse('labmeasurement-list', request=request, format=format),
         'orchardmeasurements': reverse('orchardmeasurement-list', request=request, format=format),
         'diseases': reverse('disease-list', request=request, format=format),

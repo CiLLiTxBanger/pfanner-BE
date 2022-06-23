@@ -1,8 +1,8 @@
 import re
 from webbrowser import get
 from rest_framework import permissions
-from api.models import Variety, Image
-from api.serializers import VarietySerializer, ImageSerializer
+from api.models import Variety
+from api.serializers import VarietySerializer
 from rest_framework import generics
 from rest_framework import permissions
 from rest_framework.views import APIView
