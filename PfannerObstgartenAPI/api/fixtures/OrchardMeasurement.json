@@ -3,7 +3,7 @@
     "model": "api.OrchardMeasurement",
     "pk": 1,
     "fields": {
-      "description": "test",
+      "description": "Verhalten",
       "tree": "1",
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Piniova",
@@ -12,17 +12,55 @@
       "yieldHabit": "medium",
       "temperature": "warm",
       "precipitation": "dry",
+      "lateFrost": "1",
+      "status": "1",
+      "created_on": "2021-06-02",
+      "edited_on": "2021-06-02"
+    }
+  },
+  {
+    "model": "api.OrchardMeasurement",
+    "pk": 12,
+    "fields": {
+      "description": "Verhalten",
+      "tree": "1",
+      "image_photo": "",
+      "image_description": "",
+      "frostSensitivity": "high",
+      "growthHabit": "veryHigh",
+      "yieldHabit": "low",
+      "temperature": "cold",
+      "precipitation": "wet",
+      "lateFrost": "1",
+      "status": "1",
+      "created_on": "2020-06-02",
+      "edited_on": "2020-06-02"
+    }
+  },
+  {
+    "model": "api.OrchardMeasurement",
+    "pk": 13,
+    "fields": {
+      "description": "Verhalten",
+      "tree": "1",
+      "image_photo": "",
+      "image_description": "",
+      "frostSensitivity": "medium",
+      "growthHabit": "high",
+      "yieldHabit": "high",
+      "temperature": "warm",
+      "precipitation": "dry",
       "lateFrost": "yes",
       "status": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2019-06-02",
+      "edited_on": "2019-06-02"
     }
   },
   {
     "model": "api.OrchardMeasurement",
     "pk": 2,
     "fields": {
-      "description": "testBeschreibung",
+      "description": "Verhalten",
       "tree": "2",
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Piniova",
@@ -33,15 +71,15 @@
       "precipitation": "dry",
       "lateFrost": "yes",
       "status": "0",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2021-06-02",
+      "edited_on": "2022-08-09"
     }
   },
   {
     "model": "api.OrchardMeasurement",
     "pk": 3,
     "fields": {
-      "description": "Neue Beschreibung Test",
+      "description": "Verhalten",
       "tree": "3",
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Piniova",
@@ -52,53 +90,53 @@
       "precipitation": "wet",
       "lateFrost": "no",
       "status": "0",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2022-03-07",
+      "edited_on": "2022-07-09"
     }
   },
   {
     "model": "api.OrchardMeasurement",
     "pk": 4,
     "fields": {
-      "description": "Neue Beschreibung",
+      "description": "Verhalten",
       "tree": "4",
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Piniova",
       "frostSensitivity": "high",
-      "growthHabit": "medium",
-      "yieldHabit": "low",
+      "growthHabit": "low",
+      "yieldHabit": "high",
       "temperature": "cold",
       "precipitation": "normal",
       "lateFrost": "yes",
       "status": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2021-03-07",
+      "edited_on": "2021-09-02"
     }
   },
   {
     "model": "api.OrchardMeasurement",
     "pk": 5,
     "fields": {
-      "description": "Test Beschreibung",
+      "description": "Verhalten",
       "tree": "5",
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Piniova",
       "frostSensitivity": "low",
-      "growthHabit": "high",
+      "growthHabit": "low",
       "yieldHabit": "high",
       "temperature": "warm",
       "precipitation": "dry",
       "lateFrost": "no",
       "status": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2021-08-02",
+      "edited_on": "2022-09-08"
     }
   },
   {
     "model": "api.OrchardMeasurement",
     "pk": 6,
     "fields": {
-      "description": "testBeschreibung Neu",
+      "description": "Verhalten",
       "tree": "5",
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Piniova",
@@ -109,8 +147,103 @@
       "precipitation": "dry",
       "lateFrost": "yes",
       "status": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2022-06-08",
+      "edited_on": "2022-09-09"
+    }
+  },
+  {
+    "model": "api.OrchardMeasurement",
+    "pk": 7,
+    "fields": {
+      "description": "Verhalten",
+      "tree": "5",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
+      "frostSensitivity": "medium",
+      "growthHabit": "low",
+      "yieldHabit": "high",
+      "temperature": "medium",
+      "precipitation": "dry",
+      "lateFrost": "0",
+      "status": "1",
+      "created_on": "2022-05-02",
+      "edited_on": "2022-06-08"
+    }
+  },
+  {
+    "model": "api.OrchardMeasurement",
+    "pk": 8,
+    "fields": {
+      "description": "Verhalten",
+      "tree": "5",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
+      "frostSensitivity": "medium",
+      "growthHabit": "high",
+      "yieldHabit": "high",
+      "temperature": "low",
+      "precipitation": "dry",
+      "lateFrost": "0",
+      "status": "1",
+      "created_on": "2021-02-11",
+      "edited_on": "2022-09-03"
+    }
+  },
+  {
+    "model": "api.OrchardMeasurement",
+    "pk": 9,
+    "fields": {
+      "description": "Verhalten",
+      "tree": "5",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
+      "frostSensitivity": "medium",
+      "growthHabit": "low",
+      "yieldHabit": "high",
+      "temperature": "medium",
+      "precipitation": "dry",
+      "lateFrost": "0",
+      "status": "1",
+      "created_on": "2021-03-06",
+      "edited_on": "2021-05-09"
+    }
+  },
+  {
+    "model": "api.OrchardMeasurement",
+    "pk": 10,
+    "fields": {
+      "description": "Verhalten",
+      "tree": "5",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
+      "frostSensitivity": "medium",
+      "growthHabit": "low",
+      "yieldHabit": "high",
+      "temperature": "medium",
+      "precipitation": "dry",
+      "lateFrost": "0",
+      "status": "1",
+      "created_on": "2021-08-09",
+      "edited_on": "2022-02-02"
+    }
+  },
+  {
+    "model": "api.OrchardMeasurement",
+    "pk": 11,
+    "fields": {
+      "description": "Verhalten",
+      "tree": "5",
+      "image_photo": "/uploads/pinova.jpg",
+      "image_description": "Piniova",
+      "frostSensitivity": "medium",
+      "growthHabit": "high",
+      "yieldHabit": "high",
+      "temperature": "medium",
+      "precipitation": "dry",
+      "lateFrost": "0",
+      "status": "1",
+      "created_on": "2022-01-01",
+      "edited_on": "2022-04-06"
     }
   }
 ]

@@ -4,19 +4,19 @@
     "pk": 1,
     "fields": {
       "type": "Alkmene",
-      "variety": "1",
+      "variety": "10",
       "row": "2",
-      "column": "36",
-      "planted_on": "2000-05-05",
+      "column": "9",
+      "planted_on": "2021-04-07",
       "location": "1",
       "organic": "1",
-      "latitude": "400.000",
-      "longitude": "500.000",
+      "latitude": "58.000",
+      "longitude": "160.000",
       "cut": "test",
       "active": "1",
       "owner": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2021-05-07",
+      "edited_on": "2022-05-05"
     }
   },
   {
@@ -24,19 +24,19 @@
     "pk": 2,
     "fields": {
       "type": "Dolores",
-      "variety": "2",
+      "variety": "8",
       "row": "3",
       "column": "5",
-      "planted_on": "2000-05-05",
+      "planted_on": "2020-04-02",
       "location": "1",
       "organic": "1",
-      "latitude": "400.000",
-      "longitude": "500.000",
+      "latitude": "40.000",
+      "longitude": "50.000",
       "cut": "test",
       "active": "1",
       "owner": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2021-07-03",
+      "edited_on": "2022-09-02"
     }
   },
   {
@@ -44,59 +44,159 @@
     "pk": 3,
     "fields": {
       "type": "Tabor",
-      "variety": "2",
+      "variety": "9",
       "row": "4",
       "column": "20",
-      "planted_on": "2000-05-05",
+      "planted_on": "2020-05-01",
       "location": "1",
       "organic": "1",
-      "latitude": "400.000",
-      "longitude": "500.000",
+      "latitude": "-50.000",
+      "longitude": "170.000",
       "cut": "test",
       "active": "1",
       "owner": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2020-08-09",
+      "edited_on": "2022-04-01"
     }
   },
   {
     "model": "api.Tree",
     "pk": 4,
     "fields": {
-      "type": "Resi",
-      "variety": "4",
+      "type": "Ananasrenette",
+      "variety": "7",
       "row": "5",
       "column": "15",
-      "planted_on": "2000-05-05",
+      "planted_on": "2021-03-09",
       "location": "1",
       "organic": "1",
-      "latitude": "400.000",
-      "longitude": "500.000",
+      "latitude": "30.000",
+      "longitude": "100.000",
       "cut": "test",
       "active": "1",
       "owner": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2022-01-02",
+      "edited_on": "2022-06-09"
     }
   },
   {
     "model": "api.Tree",
     "pk": 5,
     "fields": {
-      "type": "Relinda",
+      "type": "Berner Rosen",
       "variety": "3",
-      "row": "6",
+      "row": "7",
       "column": "19",
-      "planted_on": "2000-05-05",
+      "planted_on": "2021-03-01",
       "location": "1",
       "organic": "1",
-      "latitude": "400.000",
-      "longitude": "500.000",
+      "latitude": "80.000",
+      "longitude": "150.000",
       "cut": "test",
       "active": "1",
       "owner": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2021-07-09",
+      "edited_on": "2022-03-07"
+    }
+  },
+  {
+    "model": "api.Tree",
+    "pk": 6,
+    "fields": {
+      "type": "Berner Rosen",
+      "variety": "3",
+      "row": "8",
+      "column": "19",
+      "planted_on": "2021-02-09",
+      "location": "1",
+      "organic": "1",
+      "latitude": "-20.000",
+      "longitude": "-120.000",
+      "cut": "test",
+      "active": "1",
+      "owner": "1",
+      "created_on": "2022-04-06",
+      "edited_on": "2022-07-09"
+    }
+  },
+  {
+    "model": "api.Tree",
+    "pk": 7,
+    "fields": {
+      "type": "Goldlange",
+      "variety": "2",
+      "row": "10",
+      "column": "11",
+      "planted_on": "2021-05-07",
+      "location": "1",
+      "organic": "1",
+      "latitude": "-40.000",
+      "longitude": "110.000",
+      "cut": "test",
+      "active": "1",
+      "owner": "1",
+      "created_on": "2021-07-09",
+      "edited_on": "2022-01-04"
+    }
+  },
+  {
+    "model": "api.Tree",
+    "pk": 8,
+    "fields": {
+      "type": "Geflammter Cousinot",
+      "variety": "1",
+      "row": "5",
+      "column": "10",
+      "planted_on": "2021-06-03",
+      "location": "1",
+      "organic": "1",
+      "latitude": "70.000",
+      "longitude": "-100.000",
+      "cut": "test",
+      "active": "1",
+      "owner": "1",
+      "created_on": "2022-06-03",
+      "edited_on": "2022-06-07"
+    }
+  },
+  {
+    "model": "api.Tree",
+    "pk": 9,
+    "fields": {
+      "type": "Maigold",
+      "variety": "5",
+      "row": "7",
+      "column": "8",
+      "planted_on": "2020-02-07",
+      "location": "1",
+      "organic": "1",
+      "latitude": "-60.000",
+      "longitude": "110.000",
+      "cut": "test",
+      "active": "1",
+      "owner": "1",
+      "created_on": "2022-04-06",
+      "edited_on": "2022-06-09"
+    }
+  },
+  {
+    "model": "api.Tree",
+    "pk": 10,
+    "fields": {
+      "type": "Renette",
+      "variety": "6",
+      "row": "2",
+      "column": "3",
+      "planted_on": "2022-01-02",
+      "location": "1",
+      "organic": "1",
+      "latitude": "20.000",
+      "longitude": "100.000",
+      "cut": "test",
+      "active": "1",
+      "owner": "1",
+      "created_on": "2022-03-08",
+      "edited_on": "2022-06-01"
     }
   }
 ]

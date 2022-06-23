@@ -3,75 +3,166 @@
     "model": "api.LabMeasurement",
     "pk": 1,
     "fields": {
-      "timestamp": "2001-04-04",
+      "timestamp": "2018-04-04",
       "tree": "1",
       "strengthMeasurement": "0.5",
       "flavorMeasurement": "A",
       "acidMeasurement": "0.5",
       "sugarMeasurement": "0.4",
-      "status": "0",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "status": "1",
+      "created_on": "2021-06-05",
+      "edited_on": "2022-06-09"
     }
   }, 
   {
     "model": "api.LabMeasurement",
     "pk": 2,
     "fields": {
-      "timestamp": "2001-04-04",
+      "timestamp": "2017-03-06",
       "tree": "2",
       "strengthMeasurement": "7.6",
       "flavorMeasurement": "B",
       "acidMeasurement": "0.35",
       "sugarMeasurement": "11.4",
-      "status": "0",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "status": "1",
+      "created_on": "2018-03-06",
+      "edited_on": "2020-08-06"
     }
   }, 
   {
     "model": "api.LabMeasurement",
     "pk": 3,
     "fields": {
-      "timestamp": "2001-04-04",
+      "timestamp": "2021-04-04",
       "tree": "1",
       "strengthMeasurement": "5.4",
       "flavorMeasurement": "C",
       "acidMeasurement": "0.55",
       "sugarMeasurement": "4.5",
       "status": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2019-04-07",
+      "edited_on": "2020-07-02"
     }
   }, 
   {
     "model": "api.LabMeasurement",
     "pk": 4,
     "fields": {
-      "timestamp": "2001-04-04",
+      "timestamp": "2019-02-01",
       "tree": "3",
       "strengthMeasurement": "2.8",
       "flavorMeasurement": "A",
       "acidMeasurement": "0.89",
       "sugarMeasurement": "15.8",
       "status": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2021-04-01",
+      "edited_on": "2021-06-03"
     }
   },
 {
     "model": "api.LabMeasurement",
     "pk": 5,
     "fields": {
-      "timestamp": "2001-04-04",
+      "timestamp": "2021-01-05",
       "tree": "1",
-      "strengthMeasurement": "7.9",
+      "strengthMeasurement": "5.9",
       "flavorMeasurement": "A",
-      "acidMeasurement": "6.9",
-      "sugarMeasurement": "6.9",
+      "acidMeasurement": "2.9",
+      "sugarMeasurement": "4.9",
       "status": "1",
-      "created_on": "2000-05-05",
-      "edited_on": "2000-05-05"
+      "created_on": "2022-03-05",
+      "edited_on": "2022-06-01"
+    }
+  },
+{
+    "model": "api.LabMeasurement",
+    "pk": 6,
+    "fields": {
+      "timestamp": "2022-05-07",
+      "tree": "1",
+      "strengthMeasurement": "6.9",
+      "flavorMeasurement": "B",
+      "acidMeasurement": "3.8",
+      "sugarMeasurement": "2.7",
+      "status": "1",
+      "created_on": "2022-05-07",
+      "edited_on": "2022-06-08"
+    }
+  },
+{
+    "model": "api.LabMeasurement",
+    "pk": 7,
+    "fields": {
+      "timestamp": "2022-01-02",
+      "tree": "1",
+      "strengthMeasurement": "6.2",
+      "flavorMeasurement": "C",
+      "acidMeasurement": "5.2",
+      "sugarMeasurement": "7.9",
+      "status": "1",
+      "created_on": "2022-01-06",
+      "edited_on": "2022-06-09"
+    }
+  },
+{
+    "model": "api.LabMeasurement",
+    "pk": 8,
+    "fields": {
+      "timestamp": "2018-06-03",
+      "tree": "1",
+      "strengthMeasurement": "8.1",
+      "flavorMeasurement": "B",
+      "acidMeasurement": "2.3",
+      "sugarMeasurement": "4.8",
+      "status": "1",
+      "created_on": "2018-07-09",
+      "edited_on": "2019-09-08"
+    }
+  },
+{
+    "model": "api.LabMeasurement",
+    "pk": 9,
+    "fields": {
+      "timestamp": "2019-06-02",
+      "tree": "1",
+      "strengthMeasurement": "5.6",
+      "flavorMeasurement": "C",
+      "acidMeasurement": "2.7",
+      "sugarMeasurement": "1.3",
+      "status": "1",
+      "created_on": "2019-06-05",
+      "edited_on": "2020-05-02"
+    }
+  },
+{
+    "model": "api.LabMeasurement",
+    "pk": 10,
+    "fields": {
+      "timestamp": "2021-06-03",
+      "tree": "1",
+      "strengthMeasurement": "3.6",
+      "flavorMeasurement": "A",
+      "acidMeasurement": "4.1",
+      "sugarMeasurement": "2.6",
+      "status": "1",
+      "created_on": "2021-08-07",
+      "edited_on": "2022-03-09"
+    }
+  },
+{
+    "model": "api.LabMeasurement",
+    "pk": 11,
+    "fields": {
+      "timestamp": "2022-06-04",
+      "tree": "1",
+      "strengthMeasurement": "9.1",
+      "flavorMeasurement": "B",
+      "acidMeasurement": "3.4",
+      "sugarMeasurement": "5.1",
+      "status": "1",
+      "created_on": "2022-06-08",
+      "edited_on": "2022-06-09"
     }
   }
+
 ]
