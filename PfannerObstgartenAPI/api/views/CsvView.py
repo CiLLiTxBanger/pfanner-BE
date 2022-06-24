@@ -16,12 +16,12 @@ class ExportLabMeasurementsCSVByTreeId(APIView):
         treeId = treeId
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="LabMeasurements_Tree_{}.csv"'.format(str(treeId))
+        response.write(codecs.BOM_UTF8)
 
-        writer = csv.writer(response)
+        writer = csv.writer(response, delimiter= ';', dialect = 'excel')
         labMeasurements = LabMeasurement.objects.filter(tree = treeId)
 
         #Headlines
-        writer.writerow(['sep=,'])
         writer.writerow(['Tree ID', 'Variety Name', 'Strength Measurement', 'Flavor Measurement', 'Acid Measurement', 'Sugar Measurement', 'Status', 'Last Modified', 'Created on'])
 
         #Rows
@@ -35,12 +35,12 @@ class ExportOrchardMeasurementsCSVByTreeId(APIView):
         treeId = treeId
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="OrchardMeasurements_Tree_{}.csv"'.format(str(treeId))
+        response.write(codecs.BOM_UTF8)
 
-        writer = csv.writer(response)
+        writer = csv.writer(response, delimiter= ';', dialect = 'excel')
         orchardMeasurements = OrchardMeasurement.objects.filter(tree = treeId)
 
         #Headlines
-        writer.writerow(['sep=,'])
         writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Temperature', 'Precipitation', 'Late Frost', 'Status', 'Created on'])
 
         #Rows
@@ -53,8 +53,9 @@ class ExportLabMeasurementsCSV(APIView):
     def get(self, request, *args, **kwargs):
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="LabMeasurements.csv"'
+        response.write(codecs.BOM_UTF8)
 
-        writer = csv.writer(response)
+        writer = csv.writer(response, delimiter= ';', dialect = 'excel')
         location = self.request.query_params.get('location')
         labMeasurements = LabMeasurement.objects.all()
 
@@ -62,7 +63,6 @@ class ExportLabMeasurementsCSV(APIView):
             labMeasurements = labMeasurements.filter(tree__location=location)
 
         #Headlines
-        writer.writerow(['sep=,'])
         writer.writerow(['Tree ID', 'Variety Name', 'Strength Measurement', 'Flavor Measurement', 'Acid Measurement', 'Sugar Measurement', 'Status', 'Last Modified', 'Created on'])
 
         #Rows
@@ -75,8 +75,9 @@ class ExportOrchardMeasurementsCSV(APIView):
     def get(self, request, *args, **kwargs):
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="OrchardMeasurements.csv"'
+        response.write(codecs.BOM_UTF8)
 
-        writer = csv.writer(response)
+        writer = csv.writer(response, delimiter= ';', dialect = 'excel')
         location = self.request.query_params.get('location')
         orchardMeasurements = OrchardMeasurement.objects.all()
 
@@ -84,7 +85,6 @@ class ExportOrchardMeasurementsCSV(APIView):
             orchardMeasurements = orchardMeasurements.filter(tree__location=location)
 
         #Headlines
-        writer.writerow(['sep=,'])
         writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Temperature', 'Precipitation', 'Late Frost', 'Status', 'Created on'])
 
         #Rows
@@ -98,13 +98,9 @@ class ExportTreesCSV(APIView):
     def get(self, request, *args, **kwargs):
             response = HttpResponse(content_type='text/csv', charset='utf-8')
             response['Content-Disposition'] = 'attachment; filename="Trees.csv"'
+            response.write(codecs.BOM_UTF8)
 
-            #response.write(codecs.BOM_UTF8)
-#             response.write(codecs.BOM_UTF16_LE)
-#             response.write(b'\xfe\xff\x00\x00\x00')
-#             response.write(u'\ufeff'.encode('utf8'))
-
-            writer = csv.writer(response, delimiter= ',', dialect = 'excel')
+            writer = csv.writer(response, delimiter= ';', dialect = 'excel')
             location = self.request.query_params.get('location')
             trees = Tree.objects.all()
 
@@ -112,13 +108,10 @@ class ExportTreesCSV(APIView):
                 trees = trees.filter(location=location)
 
             #Headlines
-            writer.writerow(["sep=,"])
-#             writer.writerow(['codecs.BOM_UTF8'])
-#             writer.writerow(["encode('utf8')"])
             writer.writerow(['Tree ID', 'Tree Type', 'Country', 'City', 'Row', 'Column', 'Planted on', 'Organic', 'Cut', 'Longitude', 'Latitude', 'Active', 'Variety ID', 'Variety Name', 'Blossom', 'Fruit', 'Climate', 'Pick Maturity', 'Usage', 'Bio', 'Pollinator', 'Properties', 'Output', 'Disease Possibility', 'Description'])
 
             #Rows
             for tree in trees:
-                writer.writerow([tree.id, tree.type, tree.location.country, tree.location.city, tree.row, tree.column, tree.planted_on, tree.organic, tree.cut, tree.longitude, tree.latitude, tree.active, tree.variety, tree.variety.name, tree.variety.blossom, tree.variety.fruit, tree.variety.climate, tree.variety.pick_maturity, tree.variety.usage, tree.variety.bio, tree.variety.pollinator, tree.variety.properties, tree.variety.output, tree.variety.disease_possibility, tree.variety.description])
+                writer.writerow([tree.id, tree.type, tree.location.country, tree.location.city, tree.row, tree.column, tree.planted_on, tree.organic, tree.cut, tree.longitude, tree.latitude, tree.active, tree.variety.id, tree.variety.name, tree.variety.blossom, tree.variety.fruit, tree.variety.climate, tree.variety.pick_maturity, tree.variety.usage, tree.variety.bio, tree.variety.pollinator, tree.variety.properties, tree.variety.output, tree.variety.disease_possibility, tree.variety.description])
 
             return response
