@@ -30,7 +30,6 @@ class VarietyList(generics.ListCreateAPIView):
         if location is not None:
             filtersApplied = True
             queryset = queryset.filter(location=location)
-            return queryset
 
         if filtersApplied:
             filteredIds.append(queryset.values_list('variety_id', flat=True))
@@ -39,6 +38,7 @@ class VarietyList(generics.ListCreateAPIView):
         else:
             queryset = Variety.objects.all()
         return queryset
+
 
 class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     """
