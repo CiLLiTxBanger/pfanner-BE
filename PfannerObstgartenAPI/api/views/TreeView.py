@@ -126,7 +126,7 @@ class TreeAnalytics(APIView):
         if month_to is not None and year_to is not None:
             date = datetime(int(year_to), int(month_to), 1)
             orchardmeasurements = orchardmeasurements.filter(Q(created_on__year=date.year, created_on__month__lte=date.month) | Q(created_on__year__lt=date.year), status=1)
-            labmeasurements = labmeasurements.filter(Q(timestamp__year=date.year, timestamp__month__gte=date.month) | Q(timestamp__year__gt=date.year), status=1)
+            labmeasurements = labmeasurements.filter(Q(timestamp__year=date.year, timestamp__month__lte=date.month) | Q(timestamp__year__lt=date.year), status=1)
 
 
         orchardSerializer = WriteOrchardMeasurementSerializer(orchardmeasurements, many=True)
