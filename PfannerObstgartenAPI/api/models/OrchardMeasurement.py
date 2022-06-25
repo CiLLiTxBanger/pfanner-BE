@@ -9,12 +9,7 @@ class OrchardMeasurement(models.Model):
                 ("high", "high"),
                 ("veryHigh", "veryHigh"),
     ]
-    # SEASON_CHOICES = [
-    #             ("spring", "spring"),
-    #             ("summer", "summer"),
-    #             ("fall", "fall"),
-    #             ("winter", "winter"),
-    # ]
+
     PRECIPITATION_CHOICES = [
                 ("dry", "dry"),
                 ("normal", "normal"),
@@ -56,7 +51,7 @@ class OrchardMeasurement(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
 
-        #delete associated file on server when the image object is destroyed
+    #delete associated file on server when the image object is destroyed
     def delete(self):
         if self.image_photo:
             if os.path.isfile(self.image_photo.path):

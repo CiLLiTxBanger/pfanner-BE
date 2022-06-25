@@ -14,11 +14,12 @@ from rest_framework import filters
 
 class VarietyList(generics.ListCreateAPIView):
     """
-    List all Varieties, or create a new Variety. Im moment noch alles ohne Authentification möglich.
+    List all Varieties, or create a new Variety. Authentication required for POST requests.
     """
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer
     filter_backends = [filters.SearchFilter]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     search_fields = ['name', 'blossom', 'fruit', 'climate', 'pick_maturity', 'usage', 'pollinator', 'properties', 'output', 'disease_possibility', 'description']
 
     def get_queryset(self):
@@ -42,7 +43,7 @@ class VarietyList(generics.ListCreateAPIView):
 
 class VarietyDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve, update or delete a Variety. Im moment noch alles ohne Authentification möglich.
+    Retrieve, update or delete a Variety. Authentication required for POST, PUT and DELETE requests.
     """
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer

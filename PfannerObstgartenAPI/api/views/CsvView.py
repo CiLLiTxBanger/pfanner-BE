@@ -12,6 +12,7 @@ import codecs
 
 
 class ExportLabMeasurementsCSVByTreeId(APIView):
+    permission_classes = [permissions.IsAuthenticated]
     def get(self, request, treeId, *args, **kwargs):
         treeId = treeId
         response = HttpResponse(content_type='text/csv')
@@ -31,6 +32,7 @@ class ExportLabMeasurementsCSVByTreeId(APIView):
         return response
 
 class ExportOrchardMeasurementsCSVByTreeId(APIView):
+    permission_classes = [permissions.IsAuthenticated]
     def get(self, request, treeId, *args, **kwargs):
         treeId = treeId
         response = HttpResponse(content_type='text/csv')
@@ -50,6 +52,7 @@ class ExportOrchardMeasurementsCSVByTreeId(APIView):
         return response
 
 class ExportLabMeasurementsCSV(APIView):
+    permission_classes = [permissions.IsAuthenticated]
     def get(self, request, *args, **kwargs):
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="LabMeasurements.csv"'
@@ -72,6 +75,7 @@ class ExportLabMeasurementsCSV(APIView):
         return response
 
 class ExportOrchardMeasurementsCSV(APIView):
+    permission_classes = [permissions.IsAuthenticated]
     def get(self, request, *args, **kwargs):
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="OrchardMeasurements.csv"'
@@ -95,6 +99,7 @@ class ExportOrchardMeasurementsCSV(APIView):
 
 
 class ExportTreesCSV(APIView):
+    permission_classes = [permissions.IsAuthenticated]
     def get(self, request, *args, **kwargs):
             response = HttpResponse(content_type='text/csv', charset='utf-8')
             response['Content-Disposition'] = 'attachment; filename="Trees.csv"'

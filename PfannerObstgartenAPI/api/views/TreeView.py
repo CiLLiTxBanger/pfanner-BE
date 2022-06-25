@@ -20,7 +20,7 @@ from django.db.models import Q
 
 class TreeList(generics.ListCreateAPIView):
     """
-    List all Trees, or create a new Tree.
+    List all Trees, or create a new Tree. Authentication is required for POST Requests
     """
     queryset = Tree.objects.all()
     serializer_class = TreeSerializer
@@ -62,7 +62,7 @@ class PositionAlreadyInUse(APIException):
 
 class TreeDetail(generics.RetrieveUpdateAPIView):
     """
-    Retrieve or update a Tree.
+    Retrieve or update a Tree. Authentication is required for PATCH and PUT requests.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Tree.objects.all()
@@ -93,9 +93,9 @@ class TreeDetail(generics.RetrieveUpdateAPIView):
 
 class TreeAnalytics(APIView):
     """
-    Retrieve a variety instance by tree id in url.
+    Retrieve Labmeasurements and Orchardmeasurements by tree id in url and with given filters. Possible Filters are "year_from", "year_to", "month_from" and "month_to. Authentication Required"
     """
-
+    permission_classes = [permissions.IsAuthenticated]
     def get(self, request, pk, format=None):
         orchardmeasurements = OrchardMeasurement.objects.filter(tree__id=pk)
         labmeasurements = LabMeasurement.objects.filter(tree__id=pk)
