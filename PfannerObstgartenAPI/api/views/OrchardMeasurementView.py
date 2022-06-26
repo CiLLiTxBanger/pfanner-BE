@@ -10,6 +10,9 @@ from rest_framework import status
 from rest_framework import filters
 
 class OrchardMeasurementListByTreeId(APIView):
+    """
+    Get a List of all Orchardmeasurements by TreeId. Authentication required
+    """
     permission_classes = [permissions.IsAuthenticated]
     def get(request, self, treeId, format=None):
         orchardMeasurements = OrchardMeasurement.objects.filter(tree = treeId)
@@ -17,6 +20,9 @@ class OrchardMeasurementListByTreeId(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 class OrchardMeasurementList(generics.ListCreateAPIView):
+    """
+    Get a List of all Orchardmeasurements or create an Orchardmeasurement. Authentication required
+    """
     queryset = OrchardMeasurement.objects.all()
     serializer_class = OrchardMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -26,7 +32,10 @@ class OrchardMeasurementList(generics.ListCreateAPIView):
             return WriteOrchardMeasurementSerializer
         return OrchardMeasurementSerializer
 
-class OrchardMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
+class OrchardMeasurementDetail(generics.RetrieveUpdateAPIView):
+    """
+    Retrieve or Update an Orchardmeasurement. Authentication required
+    """
     queryset = OrchardMeasurement.objects.all()
     serializer_class = OrchardMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -37,6 +46,9 @@ class OrchardMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
         return OrchardMeasurementSerializer
 
 class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
+    """
+    Get a List of Trees filtered by OrchardMeasurementstats. Authentication required
+    """
     queryset = OrchardMeasurement.objects.all()
     serializer_class = TreeSerializer
     permission_classes = [permissions.IsAuthenticated]

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x-kfsu5y-+q!pjf8l_w^llz#^ef&=w#ydja^r7%o2mv78)b9&@'
+SECRET_KEY = 'xxx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,6 +43,20 @@ INSTALLED_APPS = [
 'api',
 'corsheaders'
 ]
+
+REST_FRAMEWORK = {
+'DEFAULT_AUTHENTICATION_CLASSES': [
+'rest_framework.authentication.BasicAuthentication',   #just for testing -> not for production
+'rest_framework_simplejwt.authentication.JWTAuthentication',
+],
+}
+
+SIMPLE_JWT = {
+'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+'ALGORITHM': 'HS256',
+'SIGNING_KEY': SECRET_KEY,
+}
 
 MIDDLEWARE = [
 'django.middleware.security.SecurityMiddleware',
@@ -83,12 +98,12 @@ WSGI_APPLICATION = 'PfannerObstgartenAPI.wsgi.application'
 
 DATABASES = {
 'default': {
-'ENGINE': 'xxx',
-'NAME': 'xxx',
-'USER': 'xxx',
-'PASSWORD': 'xxx',
-'HOST': 'xxx',
-'PORT': 'xxx'
+'ENGINE': xxx
+'NAME': xxx
+'USER': xxx
+'PASSWORD': xxx
+'HOST': xxx
+'PORT': '3306'
 }
 }
 

@@ -1,7 +1,7 @@
 from django.db import models
 
 class DiseaseMeasurement(models.Model):
-    value = models.CharField(max_length=50, blank=False)
+    value = models.CharField(max_length=50, blank=True, null=True, default="-")
     orchardMeasurement= models.ForeignKey(
             'OrchardMeasurement',
             on_delete=models.CASCADE

@@ -8,24 +8,19 @@ from rest_framework import permissions
 from rest_framework import filters
 
 class LabMeasurementListByTreeId(APIView):
+    """
+    Get a List of all LabMeasurements by TreeId. Authentication required
+    """
     permission_classes = [permissions.IsAuthenticated]
     def get(request, self, treeId, format=None):
         labMeasurements = LabMeasurement.objects.filter(tree = treeId)
         serializer = LabMeasurementSerializer(labMeasurements, many = True)
-        permission_classes = [permissions.IsAuthenticated]
-        #permission_classes = [admin]
         return Response(serializer.data)
-
-    def post(request, self, treeId):
-        labMeasurement = self.data
-        #Create LabMeasurement from above data
-        serializer = LabMeasurementSerializer(data=labMeasurement)
-        permission_classes = [permissions.IsAuthenticated]
-        if serializer.is_valid(raise_exception=True):
-            labMeasurement_saved = serializer.save()
-        return Response({"success": "Success!"})
         
 class LabMeasurementList(generics.ListCreateAPIView):
+    """
+    Get a List of all LabMeasurements or create a LabMeasurement. Authentication required
+    """
     queryset = LabMeasurement.objects.all()
     serializer_class = LabMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -35,7 +30,10 @@ class LabMeasurementList(generics.ListCreateAPIView):
             return WriteLabMeasurementSerializer
         return LabMeasurementSerializer
 
-class LabMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
+class LabMeasurementDetail(generics.RetrieveUpdateAPIView):
+    """
+    Retrieve or Update a LabMeasurement. Authentication required
+    """
     queryset = LabMeasurement.objects.all()
     serializer_class = LabMeasurementSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -46,6 +44,9 @@ class LabMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
         return LabMeasurementSerializer
 
 class TreesFilteredByLabMeasurementStats(generics.ListAPIView):
+    """
+    Get a List of Trees filtered by Labmeasurementstats. Authentication required
+    """
     queryset = LabMeasurement.objects.all()
     serializer_class = TreeSerializer
     permission_classes = [permissions.IsAuthenticated]

@@ -9,12 +9,7 @@ class OrchardMeasurement(models.Model):
                 ("high", "high"),
                 ("veryHigh", "veryHigh"),
     ]
-    # SEASON_CHOICES = [
-    #             ("spring", "spring"),
-    #             ("summer", "summer"),
-    #             ("fall", "fall"),
-    #             ("winter", "winter"),
-    # ]
+
     PRECIPITATION_CHOICES = [
                 ("dry", "dry"),
                 ("normal", "normal"),
@@ -48,17 +43,15 @@ class OrchardMeasurement(models.Model):
     frostSensitivity = models.CharField(max_length=30, choices = PROBABILITY_CHOICES, blank=True, null=True)
     growthHabit = models.CharField(max_length=30, choices = PROBABILITY_CHOICES, blank=True, null=True)
     yieldHabit = models.CharField(max_length=30, choices = PROBABILITY_CHOICES, blank=True, null=True)
-    #season = models.CharField(max_length=30, choices = SEASON_CHOICES, blank=True, null=True)
     temperature = models.CharField(max_length=30, choices = TEMPERATURE_CHOICES, blank=True, null=True)
     precipitation = models.CharField(max_length=30, choices = PRECIPITATION_CHOICES, blank=True, null=True)
-#     lateFrost = models.BooleanField(default=False)
     lateFrost = models.CharField(max_length=30, choices = YESNO_CHOICES, blank=True, null=True, default='no')
     status = models.BooleanField(default=False)
 
     created_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
 
-        #delete associated file on server when the image object is destroyed
+    #delete associated file on server when the image object is destroyed
     def delete(self):
         if self.image_photo:
             if os.path.isfile(self.image_photo.path):

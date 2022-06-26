@@ -20,7 +20,7 @@ class Variety(models.Model):
     pick_maturity = models.CharField(max_length=180, blank=False)
     usage = models.CharField(max_length=250, blank=False)
     bio = models.BooleanField(default=False) #bio sorte???
-    pollinator = models.CharField(max_length=250, blank=False)
+    pollinator = models.CharField(max_length=250, blank=True, null=True)
     properties = models.CharField(max_length=250, blank=False)
     output = models.CharField(max_length=250, blank=False)
     disease_possibility = models.CharField(max_length=250, blank=False)

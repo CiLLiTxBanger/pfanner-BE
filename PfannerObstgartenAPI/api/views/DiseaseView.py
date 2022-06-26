@@ -11,20 +11,26 @@ from rest_framework import generics
 from rest_framework import permissions
 
 class DiseaseList(generics.CreateAPIView, generics.ListAPIView):
+    """
+    Get a List of all Diseases or create a Disease. Authentication required
+    """
     queryset = Disease.objects.all()
     serializer_class = DiseaseSerializer
     permission_classes = [permissions.IsAuthenticated]
 
 class DiseaseDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve or update a Disease.
+    Retrieve, delete or update a Disease. Authentication required.
     """
     queryset = Disease.objects.all()
     serializer_class = DiseaseSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class DiseaseMeasurementByOrchardMeasurementList(APIView):
+    """
+    Get a List of all Diseasemeasurements by OrchardMeasurementId. Authentication required
+    """
     permission_classes = [permissions.IsAuthenticated]
 
     def get(request, self, orchardMeasurementId, format=None):
@@ -33,6 +39,9 @@ class DiseaseMeasurementByOrchardMeasurementList(APIView):
             return Response(serializer.data)
 
 class DiseaseMeasurementList(generics.ListCreateAPIView):
+    """
+    Get a list of all Diseasemeasurements or create a new Diseasemeasurement. Authentication required
+    """
     queryset = DiseaseMeasurement.objects.all()
     permission_classes = [permissions.IsAuthenticated]
 
@@ -47,18 +56,10 @@ class DiseaseMeasurementList(generics.ListCreateAPIView):
             kwargs['many'] = True
         return super(DiseaseMeasurementList, self).get_serializer(*args, **kwargs)
 
-    def perform_create(self, serializer):
-        #self.request.data['orchardMeasurement'] funkt nicht
-        # queryset = DiseaseMeasurement.objects.filter(orchardMeasurement=serializer.data['orchardMeasurement'])
-        # if queryset.exists():
-        #     queryset.delete()
-
-        serializer.save()
-
 class DiseaseMeasurementDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve or update a Disease.
+    Retrieve, delete or update a Disease. Authentication required
     """
     queryset = DiseaseMeasurement.objects.all()
     serializer_class = DiseaseMeasurementSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
