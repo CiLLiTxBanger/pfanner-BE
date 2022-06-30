@@ -9,17 +9,6 @@ class OrchardMeasurement(models.Model):
                 ("high", "high"),
                 ("veryHigh", "veryHigh"),
     ]
-
-    PRECIPITATION_CHOICES = [
-                ("dry", "dry"),
-                ("normal", "normal"),
-                ("wet", "wet"),
-    ]
-    TEMPERATURE_CHOICES = [
-                ("cold", "cold"),
-                ("medium", "medium"),
-                ("warm", "warm"),
-    ]
     YESNO_CHOICES = [
                 ("yes", "yes"),
                 ("no", "no"),

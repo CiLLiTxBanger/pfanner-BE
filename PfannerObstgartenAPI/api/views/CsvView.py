@@ -43,11 +43,11 @@ class ExportOrchardMeasurementsCSVByTreeId(APIView):
         orchardMeasurements = OrchardMeasurement.objects.filter(tree = treeId)
 
         #Headlines
-        writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Temperature', 'Precipitation', 'Late Frost', 'Status', 'Created on'])
+        writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Late Frost', 'Status', 'Created on'])
 
         #Rows
         for oM in orchardMeasurements:
-            writer.writerow([oM.tree.id, oM.tree.variety.name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.temperature, oM.precipitation, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
+            writer.writerow([oM.tree.id, oM.tree.variety.name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
 
         return response
 
@@ -89,11 +89,11 @@ class ExportOrchardMeasurementsCSV(APIView):
             orchardMeasurements = orchardMeasurements.filter(tree__location=location)
 
         #Headlines
-        writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Temperature', 'Precipitation', 'Late Frost', 'Status', 'Created on'])
+        writer.writerow(['Tree ID', 'Variety Name', 'Frost Sensitivity', 'Growth Habit', 'Yield Habit', 'Late Frost', 'Status', 'Created on'])
 
         #Rows
         for oM in orchardMeasurements:
-            writer.writerow([oM.tree.id, oM.tree.variety.name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.temperature, oM.precipitation, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
+            writer.writerow([oM.tree.id, oM.tree.variety.name, oM.frostSensitivity, oM.growthHabit, oM.yieldHabit, oM.lateFrost, oM.status, oM.created_on.strftime("%d.%m.%Y - %H:%M")])
 
         return response
 

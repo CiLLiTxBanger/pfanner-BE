@@ -61,8 +61,6 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
         frostSensitivity = self.request.query_params.get('frostSensitivity')
         growthHabit = self.request.query_params.get('growthHabit')
         yieldHabit = self.request.query_params.get('yieldHabit')
-        precipitation = self.request.query_params.get('precipitation')
-        temperature = self.request.query_params.get('temperature')
         row = self.request.query_params.get('row')
         column = self.request.query_params.get('column')
         treeid = self.request.query_params.get('treeid')
@@ -82,14 +80,6 @@ class TreesFilteredByOrchardMeasurementStats(generics.ListAPIView):
         if yieldHabit is not None:
             filtersApplied = True
             queryset = queryset.filter(yieldHabit=yieldHabit)
-
-        if precipitation is not None:
-            filtersApplied = True
-            queryset = queryset.filter(precipitation=precipitation)
-
-        if temperature is not None:
-            filtersApplied = True
-            queryset = queryset.filter(temperature=temperature)
 
         if row is not None:
             filtersApplied = True
