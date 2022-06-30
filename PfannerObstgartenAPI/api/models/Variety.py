@@ -15,7 +15,6 @@ class Variety(models.Model):
             null=True
     )
     blossom = models.CharField(max_length=180, blank=False)
-    fruit = models.CharField(max_length=180, blank=False)
     climate = models.CharField(max_length=180, blank=False)
     pick_maturity = models.CharField(max_length=180, blank=False)
     usage = models.CharField(max_length=250, blank=False)

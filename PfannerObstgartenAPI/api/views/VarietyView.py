@@ -20,7 +20,7 @@ class VarietyList(generics.ListCreateAPIView):
     serializer_class = VarietySerializer
     filter_backends = [filters.SearchFilter]
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    search_fields = ['name', 'blossom', 'fruit', 'climate', 'pick_maturity', 'usage', 'pollinator', 'properties', 'output', 'disease_possibility', 'description']
+    search_fields = ['name', 'blossom', 'climate', 'pick_maturity', 'usage', 'pollinator', 'properties', 'output', 'disease_possibility', 'description']
 
     def get_queryset(self):
         queryset = Tree.objects.all()

@@ -7,7 +7,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "mittelfrüh, lange anhaltend, unempfindlich",
-      "fruit": "mittelgroß, mittellanger Stiel, dick, Stielgrube mitteltief, mürbe",
       "climate": "robust",
       "pick_maturity": "September",
       "usage": "Wirtschafts- und Tafelapfel",
@@ -29,7 +28,6 @@
       "image_photo": "/uploads/brilliant.jpg",
       "image_description": "Brilliant",
       "blossom": "April bis Mai",
-      "fruit": "fest, kurzer Stiel, sehr groß, Stielgrube weit, knackig",
       "climate": "sonnig bis halbschattiger Standort, nährstoffreicher, durchlässiger Boden",
       "pick_maturity": "Mitte Oktober",
       "usage": "Tafelapfel",
@@ -51,7 +49,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "lang anhaltend, nicht empfindlich, guter Pollenspender",
-      "fruit": "mittelgroß, unterschiedlich, kurzer, dicker Stiel",
       "climate": "nährstoffreicher, feuchter Boden",
       "pick_maturity": "Anfang bis Mitte September",
       "usage": "Wirtschafts- und Tafelsorte",
@@ -73,7 +70,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "spät, lange anhaltend, nicht empfindlich",
-      "fruit": "groß und schwer, dicke Schale, flach bis hochkugelig",
       "climate": "geschützte Lagen, nährstoffreicher, durchlässiger Boden, höhere Lagen",
       "pick_maturity": "ab Ende September",
       "usage": "Wirtschaftssorte, Most",
@@ -95,7 +91,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "mittelfrüh, diploid, Pollen gut, teilweise selbstfruchtbar",
-      "fruit": "mittel bis groß, knackig, ungelichmäßig Stielgrube, tief",
       "climate": "viel Wärme- und Lichtbedarf, hoher Pflegebedarf",
       "pick_maturity": "Anfang bis Mitte Oktober",
       "usage": "mittel für Alternanz",
@@ -117,7 +112,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "frühe Blüte, frostempfindlich",
-      "fruit": "groß, schwer, kurzer Stiel, mitteldick, Stielbucht flach bis mitteltief",
       "climate": "frosttolerant, geringe Ansprüche, freie, kühlere Lagen möglich",
       "pick_maturity": "Mitte bis Ende Oktober",
       "usage": "Tafelobst, Saft, Küche, Most",
@@ -130,7 +124,7 @@
       "edited_on": "2021-08-04"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 6,
     "fields": {
@@ -138,7 +132,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "frühe Blüte, frostempfindlich",
-      "fruit": "groß, schwer, kurzer Stiel, mitteldick, Stielbucht flach bis mitteltief",
       "climate": "frosttolerant, geringe Ansprüche, freie, kühlere Lagen möglich",
       "pick_maturity": "Mitte bis Ende Oktober",
       "usage": "Tafelobst, Saft, Küche, Most",
@@ -151,7 +144,7 @@
       "edited_on": "2021-04-01"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 7,
     "fields": {
@@ -159,7 +152,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "frühe Blüte, frostempfindlich",
-      "fruit": "groß, schwer, kurzer Stiel, mitteldick, Stielbucht flach bis mitteltief",
       "climate": "frosttolerant, geringe Ansprüche, freie, kühlere Lagen möglich",
       "pick_maturity": "Mitte bis Ende Oktober",
       "usage": "Tafelobst, Saft, Küche, Most",
@@ -172,7 +164,7 @@
       "edited_on": "2022-04-02"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 8,
     "fields": {
@@ -180,7 +172,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "frühe Blüte, frostempfindlich",
-      "fruit": "groß, schwer, kurzer Stiel, mitteldick, Stielbucht flach bis mitteltief",
       "climate": "frosttolerant, geringe Ansprüche, freie, kühlere Lagen möglich",
       "pick_maturity": "Mitte bis Ende Oktober",
       "usage": "Tafelobst, Saft, Küche, Most",
@@ -193,7 +184,7 @@
       "edited_on": "2021-03-07"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 9,
     "fields": {
@@ -201,7 +192,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "frühe Blüte, frostempfindlich",
-      "fruit": "groß, schwer, kurzer Stiel, mitteldick, Stielbucht flach bis mitteltief",
       "climate": "frosttolerant, geringe Ansprüche, freie, kühlere Lagen möglich",
       "pick_maturity": "Mitte bis Ende Oktober",
       "usage": "Tafelobst, Saft, Küche, Most",
@@ -214,7 +204,7 @@
       "edited_on": "2022-05-01"
     }
   },
- {
+  {
     "model": "api.Variety",
     "pk": 10,
     "fields": {
@@ -222,7 +212,6 @@
       "image_photo": "/uploads/pinova.jpg",
       "image_description": "Bildbeschreibung",
       "blossom": "frühe Blüte, frostempfindlich",
-      "fruit": "groß, schwer, kurzer Stiel, mitteldick, Stielbucht flach bis mitteltief",
       "climate": "frosttolerant, geringe Ansprüche, freie, kühlere Lagen möglich",
       "pick_maturity": "Mitte bis Ende Oktober",
       "usage": "Tafelobst, Saft, Küche, Most",
@@ -235,5 +224,4 @@
       "edited_on": "2022-06-02"
     }
   }
-
 ]

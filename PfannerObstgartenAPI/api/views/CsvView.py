@@ -113,10 +113,10 @@ class ExportTreesCSV(APIView):
                 trees = trees.filter(location=location)
 
             #Headlines
-            writer.writerow(['Tree ID', 'Tree Type', 'Country', 'City', 'Row', 'Column', 'Planted on', 'Organic', 'Cut', 'Longitude', 'Latitude', 'Active', 'Variety ID', 'Variety Name', 'Blossom', 'Fruit', 'Climate', 'Pick Maturity', 'Usage', 'Bio', 'Pollinator', 'Properties', 'Output', 'Disease Possibility', 'Description'])
+            writer.writerow(['Tree ID', 'Tree Type', 'Country', 'City', 'Row', 'Column', 'Planted on', 'Organic', 'Cut', 'Longitude', 'Latitude', 'Active', 'Variety ID', 'Variety Name', 'Blossom', 'Climate', 'Pick Maturity', 'Usage', 'Bio', 'Pollinator', 'Properties', 'Output', 'Disease Possibility', 'Description'])
 
             #Rows
             for tree in trees:
-                writer.writerow([tree.id, tree.type, tree.location.country, tree.location.city, tree.row, tree.column, tree.planted_on, tree.organic, tree.cut, tree.longitude, tree.latitude, tree.active, tree.variety.id, tree.variety.name, tree.variety.blossom, tree.variety.fruit, tree.variety.climate, tree.variety.pick_maturity, tree.variety.usage, tree.variety.bio, tree.variety.pollinator, tree.variety.properties, tree.variety.output, tree.variety.disease_possibility, tree.variety.description])
+                writer.writerow([tree.id, tree.type, tree.location.country, tree.location.city, tree.row, tree.column, tree.planted_on, tree.organic, tree.cut, tree.longitude, tree.latitude, tree.active, tree.variety.id, tree.variety.name, tree.variety.blossom, tree.variety.climate, tree.variety.pick_maturity, tree.variety.usage, tree.variety.bio, tree.variety.pollinator, tree.variety.properties, tree.variety.output, tree.variety.disease_possibility, tree.variety.description])
 
             return response

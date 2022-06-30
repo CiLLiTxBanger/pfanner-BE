@@ -26,7 +26,7 @@ class TreeList(generics.ListCreateAPIView):
     serializer_class = TreeSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [filters.SearchFilter]
-    search_fields = ['type', 'variety__name', 'variety__blossom', 'variety__fruit', 'variety__climate', 'variety__pick_maturity',
+    search_fields = ['type', 'variety__name', 'variety__blossom', 'variety__climate', 'variety__pick_maturity',
      'variety__usage', 'variety__pollinator', 'variety__properties', 'variety__output', 'variety__disease_possibility', 'variety__description']
 
     def perform_create(self, serializer):
